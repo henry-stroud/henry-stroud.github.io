@@ -6,35 +6,31 @@
   <script type="text/javascript" src="./main.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <title>Henry Stroud</title>
 </head>
 <body>
   <header>
     <nav>
-      <ul>
-        <li>
-          About
-        </li>
-        <li>
-          Experience
-        </li>
-        <li>
-          Projects
-        </li>
-        <li>
-          Contact
-        </li>
-      </ul>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
   </header>
   <main>
-    <section>
-      <h1 data-aos="fade-up">
-        HENRY STROUD
-      </h1>
-        <a>HENRY STROUD</a>
+    <section class="title">
+      <div class="title-container">
+        <div class="console-container"><span id="text"></span>
+          <div class="console-underscore" id="console">&#95;
+          </div>
+        </div>
+        <i id="chevron" class="fas fa-chevron-down hidden"></i>
+        <p id="scroll" class="scroll-down hidden">scroll down</p>
+      </div>
     </section>
-    <section>
+    <section class="about" data-aos="flip-up">
       <h1>
         About
       </h1>
@@ -44,7 +40,7 @@
         Moving into web development was a natural progression for me. I have always had a keen interest in technology and working out new software in my spare time. I’ve taught myself Adobe Photoshop, Illustrator, and Premiere Pro and have used these skills extensively in my director role at Bade Records. I wanted to link my passion for tech with my ability to learn new skills, and the WDI course at General Assembly was the next logical step in my career.
       </p>
     </section>
-    <section>
+    <section class="skills" data-aos="slide-up">
       <h2>
         Skills
       </h2>
@@ -75,7 +71,7 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section class="experience" data-aos="zoom-in-left">
       <h1>
         Experience
       </h1>
@@ -111,7 +107,7 @@
       </ul>
       </p>
     </section>
-    <section>
+    <section class="projects">
       <h1>
         Projects
       </h1>
@@ -203,7 +199,7 @@
         <p>Deployed Project: https://henry-stroud.github.io/wdi-project-1/</p>
       </p>
     </section>
-    <section>
+    <section class="contact">
       <h1>
         Contact
       </h1>
@@ -218,10 +214,14 @@
           LinkedIn: linkedin.com/in/henry-stroud/
         </li>
       </ul>
+    </section>
   </main>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
  <script>
-   AOS.init();
+   AOS.init({
+     duration: 2000,
+     once: true,
+   });
  </script>
 </body>
 </html>

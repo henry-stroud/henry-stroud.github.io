@@ -2,56 +2,72 @@
   font-family: "Montserrat", sans-serif;
   background-color: #031e43;
   color: #fdfdfd;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #031e43;
 }
-
-a {
-  color: #fdfdfd;
-  font-size: 100px;
-  font-weight: bold;
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+body header nav a {
   text-decoration: none;
-  letter-spacing: -3px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
 }
-
-a:before,
-a:after {
-  content: "";
-  padding: 120px;
-  position: absolute;
-  left: 50%;
+body main {
+  background-color: #031e43;
+}
+body main section {
   width: 100%;
-  top: 50%;
-  display: block;
-  border: 20px solid red;
-  transform: translateX(-50%) translateY(-50%) rotate(0deg);
-  animation: 10s alternate ease-in-out tipsy;
+  height: 100vh;
+}
+body main section .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 500%;
+}
+body main section .title-container .scroll-down {
+  font-size: 25%;
+}
+body main section .title-container h1, body main section .title-container h5 {
+  margin: 0 auto;
 }
 
-a:before {
-  border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
-  z-index: -1;
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title i {
+  margin-top: 100px;
+  -webkit-text-stroke: 7px #031e43;
+}
+.title .console-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #031e43;
 }
 
-a:after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+.console-underscore {
+  background-color: #031e43;
 }
 
-@keyframes tipsy {
-  0% {
-    transform: translateX(-50%) translateY(-50%) rotate(0deg);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) rotate(360deg);
-  }
+.hidden {
+  opacity: 0;
+  background-color: #031e43;
+}
+
+.visible {
+  opacity: 1;
+  background-color: #031e43;
 }
 
 /*# sourceMappingURL=style.css.map */
