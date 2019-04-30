@@ -23,6 +23,7 @@ body main {
   background-color: #031e43;
 }
 body main section {
+  padding: 20px;
   width: 100%;
   height: 100vh;
 }
@@ -68,6 +69,101 @@ body main section .title-container h1, body main section .title-container h5 {
 .visible {
   opacity: 1;
   background-color: #031e43;
+}
+
+.about {
+  width: 25%;
+  text-align: justify;
+}
+
+.about-header {
+  font-size: 500%;
+}
+.about-header span {
+  color: tomato;
+}
+
+.react-logo {
+  height: 100px;
+  width: 100px;
+}
+
+#Layer_2 {
+  max-width: 95%;
+  max-height: 95%;
+}
+#Layer_2 path {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-width: 7;
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  animation: draw 4s linear forwards;
+  animation-delay: 1s;
+}
+#Layer_2 circle {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-width: 7;
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  animation: draw 4s linear forwards;
+  animation-delay: 4s;
+}
+
+#html-5 {
+  max-width: 95%;
+  max-height: 95%;
+}
+#html-5 path {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-width: 3;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw 5s linear forwards;
+  animation-delay: 2s;
+}
+
+#css-3 {
+  max-width: 95%;
+  max-height: 95%;
+}
+#css-3 path {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-width: 3;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw 4s linear forwards;
+  animation-delay: 3s;
+}
+
+#js {
+  max-width: 95%;
+  max-height: 95%;
+}
+#js path {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-width: 3;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw 7s linear forwards;
+  animation-delay: 1s;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

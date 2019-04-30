@@ -3,6 +3,11 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
   <script type="text/javascript" src="./main.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -13,10 +18,10 @@
 <body>
   <header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
   <main>
@@ -30,10 +35,10 @@
         <p id="scroll" class="scroll-down hidden">scroll down</p>
       </div>
     </section>
-    <section class="about" data-aos="flip-up">
-      <h1>
-        About
-      </h1>
+    <section class="about" data-aos="fade-right">
+      <div class="about-header">
+        <span>About</span>
+      </div>
       <p>
         My previous role as a music publicist gave me huge insight into the world of client based project management and team coordination, both locally and internationally. Over the course of three years, I connected artists and festivals with journalists worldwide, creating profile pieces and magazine features to be delivered on strict timeframes.
 
@@ -41,187 +46,226 @@
       </p>
     </section>
     <section class="skills" data-aos="slide-up">
-      <h2>
-        Skills
-      </h2>
-      <ul>
-        <li>
-          Front-End: HTML5, CSS3, SCSS, Bulma
-        </li>
-        <li>
-          JavaScript: ES6, React, MongoDB, Express.js, Node.js, jQuery
-        </li>
-        <li>
-          Compilers: yarn, npm
-        </li>
-        <li>
-          Python: Flask
-        </li>
-        <li>
-          Databases: SQL
-        </li>
-        <li>
-          Version Control / Deployment: Heroku, GitHub, Git
-        </li>
-        <li>
-          Methods: RESTful APIs, CRUD, Testing (Mocha)
-        </li>
-        <li>
-          Design/Creative: Adobe PhotoShop, Adobe Illustrator, Adobe Premiere Pro, Ableton
-        </li>
-      </ul>
-    </section>
-    <section class="experience" data-aos="zoom-in-left">
-      <h1>
-        Experience
-      </h1>
-      <h2>
-        General Assembly: Web Developement Immersive Course
-      </h2>
-      <h3>
-        January 2019 - April 2019
-      </h3>
-      <p>
-        <ul>
-          <li>
-            Group-based weeklong projects building applications, gained
-            cooperative skills working in teams as well as project managing in an
-            agile environment.
-          </li>
-          <li>
-            Learnt fundamentals of JavaScript, HTML, CSS, Python as well as SQL
-            and MongoDB.
-          </li>
-          <li>
-            Created responsive webpages with HTML, CSS, Javascript, React
-          </li>
-          <li>
-            Designing complex single page dynamic web applications
-          </li>
-          <li>
-            Creating and deploying full-stack web application
-          </li>
-          <li>
-            Version control with Git
-          </li>
-      </ul>
-      </p>
-    </section>
-    <section class="projects">
-      <h1>
-        Projects
-      </h1>
-      <h3>
-        Project 4 - YouBet - Solo Project
-      </h3>
-      <h5>
-        <ul>
-          <li>
-            Full-Stack Application
-          </li>
-          <li>
-            Technologies - Flask, Python, SQLAlchemy, React
-          </li>
-          <li>
-            Timeframe - 1 week
-          </li>
-        <ul>
-      </h5>
-      <p>
-        I took on the project solo in order to cement all the skills I had learnt over the course. I created an application that took data from YouTube’s API and created a marketplace for buying and selling videos with game credit. The biggest challenge was creating my own back-end models that referenced YouTube’s data, but added prices to each video.
-        <p>Readme:</p>
-        <p>Deployed Project: https://you-bet.herokuapp.com/</p>
-      </p>
-      <h3>
-        Project 3 - Player Connect - Group Project
-      </h3>
-      <h5>
-        <ul>
-          <li>
-            Full-Stack Application
-          </li>
-          <li>
-            Technologies - React, Express, MongoDB
-          </li>
-          <li>
-            Timeframe - 1 week
-          </li>
-        <ul>
-      </h5>
-      <p>
-        In a team of three we built a Full-Stack gaming social network application that used an external API (IGDB) to gather game data. We were able to add a reference to each game into our back-end, and attach our own comments and ratings models to that reference. We also created a live chatbox with socket.io so users could chat live on the app, as well as creating user profiles and linking through users and comments so the site was a fully cyclical experience.
+      <div class="logos">
+        <svg id="js" width="100" height="100" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><path d="M0 0h256v256H0V0z" fill="#F7DF1E"/><path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"/></svg>
 
-        <p>Readme:</p>
-        <p>Deployed Project: http://player-connect.herokuapp.com/</p>
-      </p>
-      <h3>
-        Project 2 - Artistify - Pair Project
-      </h3>
-      <h5>
-        <ul>
-          <li>
-            Front-End Application
-          </li>
-          <li>
-            Technologies - React, External API
-          </li>
-          <li>
-            Timeframe - 3 days
-          </li>
-        <ul>
-      </h5>
-      <p>
-        We chose to use 4 APIs, Spotify, LastFM, MusixMatch and Mapbox, in order to create an application with which you can search any artist in the world and it will display their top 10 tracks, biography, where they are from and if they are on tour or not. The project was a success and it was interesting working in a pair, using teletype on our text editor to share code simultaneously.
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 1001.13 890.65"><defs><style>.cls-1{fill:none;}.cls-2{fill:none;stroke:#00d8ff;stroke-miterlimit:10;stroke-width:24px;}</style></defs><title>Artboard 1</title>
+          <circle class="cls-1" cx="504.59" cy="444.48" r="89.57" stroke="white" stroke-width="6" fill="none"/>
+          <path class="cls-2" d="M504.59,262.37c120.25,0,232,17.26,316.2,46.26,101.49,34.94,163.88,87.9,163.88,135.85,0,50-66.13,106.24-175.11,142.35-82.4,27.3-190.82,41.55-305,41.55-117,0-227.87-13.38-311.18-41.85-105.42-36-168.91-93-168.91-142,0-47.57,59.57-100.11,159.64-135C268.68,280,383.16,262.37,504.59,262.37Z"/>
+          <path class="cls-2" d="M346.06,354c60.07-104.17,130.83-192.32,198-250.81,81-70.46,158-98,199.56-74.1,43.29,25,59,110.36,35.83,222.81-17.52,85-59.34,186-116.37,284.95C604.64,638.18,537.69,727.51,471.4,785.45c-83.87,73.32-165,99.85-207.43,75.37-41.2-23.77-57-101.63-37.2-205.74C243.48,567.11,285.39,459.15,346.06,354Z"/>
+          <path class="cls-2" d="M346.21,537.06C286,433,244.92,327.66,227.82,240.23c-20.61-105.33-6-185.87,35.46-209.9,43.25-25,125.08,4,210.93,80.24C539.12,168.2,605.77,254.89,663,353.69,721.6,455,765.55,557.59,782.65,644c21.63,109.29,4.12,192.79-38.31,217.35-41.16,23.83-116.49-1.4-196.81-70.52C479.66,732.39,407.05,642.15,346.21,537.06Z"/></svg>
 
-        <p>Readme:</p>
-        <p>Deployed Project: https://artistifyapii.herokuapp.com</p>
-      </p>
-      <h3>
-        Project 1 - Battleships - Solo Project
-      </h3>
-      <h5>
+          <svg id="html-5" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="74.634 0 362.733 512">
+            <path d="M107.644 470.877L74.634 100.62h362.733l-33.046 370.199L255.778 512z"/>
+            <path d="M256 480.522l120.03-33.276 28.24-316.352H256z"/><g fill="#ebebeb"><path d="M256 268.217h-60.09l-4.15-46.501H256v-45.411H142.132l1.087 12.183 11.161 125.139H256zM256 386.153l-.198.053-50.575-13.656-3.233-36.217h-45.585l6.362 71.301 93.02 25.823.209-.058z"/></g><path d="M108.382 0h23.077v22.8h21.11V0h23.078v69.044H152.57v-23.12h-21.11v23.12h-23.076V0h-.002zM205.994 22.896h-20.315V0h63.72v22.896h-20.325v46.148h-23.078l-.002-46.148zM259.511 0h24.062l14.802 24.26L313.163 0h24.072v69.044h-22.982V34.822l-15.877 24.549h-.396l-15.889-24.549v34.222h-22.579V0zM348.72 0h23.084v46.222h32.453v22.822H348.72V0z"/><g fill="#fff">
+              <path d="M255.844 268.217v45.41h55.917l-5.271 58.894-50.646 13.67v47.244l93.093-25.801.683-7.672 10.671-119.551 1.108-12.194h-12.237zM255.844 176.305V221.716h109.687l.911-10.207 2.069-23.021 1.086-12.183z"/>
+            </g>
+          </svg>
+          <svg id="css-3" width="100px" height="100px" viewBox="0 0 342 480" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g id="#000000ff">
+              <path fill="#000000" opacity="1.00" d=" M 68.37 0.96 C 89.37 0.70 110.37 0.88 131.37 0.87 C 131.42 7.44 131.52 14.01 131.28 20.58 C 116.73 20.48 102.19 20.58 87.65 20.67 C 87.55 30.21 87.36 39.75 87.45 49.29 C 102.05 49.38 116.66 49.52 131.26 49.46 C 131.43 54.86 131.37 60.28 131.21 65.69 C 110.27 65.55 89.33 65.61 68.39 65.63 C 68.44 44.07 68.48 22.52 68.37 0.96 Z" />
+              <path fill="#000000" opacity="1.00" d=" M 138.86 0.89 C 160.12 0.85 181.38 0.72 202.65 0.96 C 202.57 7.17 202.63 13.37 202.63 19.58 C 187.16 19.53 171.68 19.60 156.21 19.78 C 156.23 22.22 156.23 24.66 156.21 27.10 C 171.66 27.35 187.10 27.38 202.54 27.47 C 202.60 40.20 202.57 52.92 202.65 65.64 C 181.38 65.60 160.11 65.62 138.84 65.72 C 138.73 60.58 138.72 55.45 138.87 50.31 C 153.61 50.35 168.36 50.37 183.10 50.25 C 183.19 46.94 183.23 43.62 183.22 40.31 C 168.41 40.31 153.59 40.36 138.78 40.26 C 138.78 27.14 138.78 14.01 138.86 0.89 Z" />
+              <path fill="#000000" opacity="1.00" d=" M 209.77 1.00 C 230.99 1.00 252.22 1.00 273.44 1.00 C 273.53 7.24 273.62 13.48 273.42 19.71 C 257.88 19.70 242.34 19.79 226.80 19.82 C 226.84 22.37 226.90 24.92 227.03 27.47 C 242.48 27.40 257.93 27.59 273.37 27.75 C 273.51 40.42 273.61 53.09 273.43 65.76 C 252.16 65.70 230.89 65.70 209.62 65.80 C 209.49 60.68 209.45 55.54 209.67 50.42 C 224.38 50.53 239.10 50.51 253.82 50.37 C 253.86 47.05 253.93 43.73 253.90 40.42 C 239.13 40.56 224.35 40.48 209.57 40.43 C 209.57 27.29 209.67 14.14 209.77 1.00 Z" />
+            </g>
+            <g id="#0170baff">
+              <path fill="#0170ba" opacity="1.00" d=" M 0.00 92.46 C 113.92 92.45 227.83 92.44 341.75 92.46 C 335.48 163.31 329.31 234.16 322.78 304.99 C 318.90 350.26 314.90 395.53 310.68 440.77 C 286.37 447.21 262.30 454.55 238.00 461.02 C 215.68 467.57 193.18 473.50 170.85 480.00 L 170.19 480.00 C 148.94 473.68 127.48 468.12 106.23 461.80 C 81.15 455.04 56.29 447.50 31.20 440.77 C 27.93 406.86 24.98 372.93 22.07 339.00 C 16.58 276.31 10.61 213.66 5.33 150.96 C 3.50 132.09 2.19 113.16 0.00 94.33 L 0.00 92.46 M 171.41 120.41 C 171.17 134.02 171.59 147.64 171.17 161.24 C 132.09 161.10 93.00 161.21 53.92 161.25 C 54.59 174.46 56.36 187.58 58.18 200.68 C 94.54 202.03 130.95 200.63 167.31 201.72 C 135.50 215.99 103.30 229.43 71.35 243.40 C 68.61 244.62 65.68 245.54 63.23 247.32 C 63.50 261.83 65.84 276.26 66.87 290.74 C 86.25 290.67 105.62 290.36 125.00 290.33 C 140.53 290.25 156.07 290.56 171.60 290.22 C 170.86 314.08 171.83 337.97 171.10 361.83 C 160.65 360.28 150.33 357.95 139.92 356.10 C 131.71 354.31 123.30 353.38 115.21 351.03 C 114.06 339.58 113.26 328.09 112.24 316.63 C 109.90 315.91 107.42 315.98 105.00 315.94 C 93.26 316.01 81.51 315.90 69.76 316.08 C 70.91 338.11 72.89 360.11 76.26 381.93 C 87.84 384.95 99.44 387.91 111.00 391.06 C 128.71 395.88 146.64 399.89 164.38 404.63 C 166.49 405.08 168.62 405.86 170.81 405.68 C 171.99 420.17 171.08 434.75 171.30 449.28 C 175.39 448.62 179.41 447.61 183.36 446.39 C 216.94 437.27 250.48 427.98 284.04 418.77 C 285.71 405.57 286.49 392.28 287.81 379.05 C 291.30 338.83 294.82 298.61 298.48 258.40 C 302.77 212.40 306.48 166.35 310.80 120.35 C 264.33 120.39 217.87 120.26 171.41 120.41 Z" />
+            </g>
+            <g id="#29a9dfff">
+              <path fill="#29a9df" opacity="1.00" d=" M 171.41 120.41 C 217.87 120.26 264.33 120.39 310.80 120.35 C 306.48 166.35 302.77 212.40 298.48 258.40 C 294.82 298.61 291.30 338.83 287.81 379.05 C 286.49 392.28 285.71 405.57 284.04 418.77 C 250.48 427.98 216.94 437.27 183.36 446.39 C 179.41 447.61 175.39 448.62 171.30 449.28 C 171.08 434.75 171.99 420.17 170.81 405.68 C 171.11 405.62 171.72 405.50 172.02 405.44 C 203.25 397.60 234.27 388.97 265.43 380.85 C 269.37 336.65 273.74 292.47 276.51 248.18 C 250.01 248.32 223.50 248.24 197.00 248.35 C 193.14 248.37 189.28 248.35 185.44 248.07 C 199.70 240.73 214.70 234.91 229.34 228.36 C 243.39 221.99 257.61 216.02 271.71 209.77 C 274.43 208.52 277.33 207.48 279.72 205.62 C 280.66 202.17 280.61 198.56 280.98 195.03 C 281.79 183.83 283.23 172.69 283.77 161.48 C 246.24 161.18 208.71 161.44 171.17 161.24 C 171.59 147.64 171.17 134.02 171.41 120.41 Z" />
+              <path fill="#29a9df" opacity="1.00" d=" M 171.60 290.22 C 189.72 289.91 207.85 290.40 225.98 290.28 C 224.97 308.81 223.43 327.31 222.47 345.84 C 211.36 349.47 200.08 352.54 188.88 355.90 C 182.91 357.72 176.78 359.16 171.10 361.83 C 171.83 337.97 170.86 314.08 171.60 290.22 Z" />
+            </g>
+            <g id="#cfcfcfff">
+              <path fill="#cfcfcf" opacity="1.00" d=" M 53.92 161.25 C 93.00 161.21 132.09 161.10 171.17 161.24 C 171.68 204.24 171.04 247.24 171.60 290.22 C 156.07 290.56 140.53 290.25 125.00 290.33 C 105.62 290.36 86.25 290.67 66.87 290.74 C 65.84 276.26 63.50 261.83 63.23 247.32 C 65.68 245.54 68.61 244.62 71.35 243.40 C 103.30 229.43 135.50 215.99 167.31 201.72 C 130.95 200.63 94.54 202.03 58.18 200.68 C 56.36 187.58 54.59 174.46 53.92 161.25 Z" />
+              <path fill="#cfcfcf" opacity="1.00" d=" M 69.76 316.08 C 81.51 315.90 93.26 316.01 105.00 315.94 C 107.42 315.98 109.90 315.91 112.24 316.63 C 113.26 328.09 114.06 339.58 115.21 351.03 C 123.30 353.38 131.71 354.31 139.92 356.10 C 150.33 357.95 160.65 360.28 171.10 361.83 C 172.10 376.35 170.35 390.97 172.02 405.44 C 171.72 405.50 171.11 405.62 170.81 405.68 C 168.62 405.86 166.49 405.08 164.38 404.63 C 146.64 399.89 128.71 395.88 111.00 391.06 C 99.44 387.91 87.84 384.95 76.26 381.93 C 72.89 360.11 70.91 338.11 69.76 316.08 Z" />
+            </g>
+            <g id="#ffffffff">
+              <path fill="#ffffff" opacity="1.00" d=" M 171.17 161.24 C 208.71 161.44 246.24 161.18 283.77 161.48 C 283.23 172.69 281.79 183.83 280.98 195.03 C 280.61 198.56 280.66 202.17 279.72 205.62 C 277.33 207.48 274.43 208.52 271.71 209.77 C 257.61 216.02 243.39 221.99 229.34 228.36 C 214.70 234.91 199.70 240.73 185.44 248.07 C 189.28 248.35 193.14 248.37 197.00 248.35 C 223.50 248.24 250.01 248.32 276.51 248.18 C 273.74 292.47 269.37 336.65 265.43 380.85 C 234.27 388.97 203.25 397.60 172.02 405.44 C 170.35 390.97 172.10 376.35 171.10 361.83 C 176.78 359.16 182.91 357.72 188.88 355.90 C 200.08 352.54 211.36 349.47 222.47 345.84 C 223.43 327.31 224.97 308.81 225.98 290.28 C 207.85 290.40 189.72 289.91 171.60 290.22 C 171.04 247.24 171.68 204.24 171.17 161.24 Z" />
+            </g>
+          </svg>
+        </div>
+        <h2>
+          Skills
+        </h2>
         <ul>
           <li>
-            Front-End Application
+            Front-End: HTML5, CSS3, SCSS, Bulma
           </li>
           <li>
-            Technologies - JavaScript, HTML, CSS
+            JavaScript: ES6, React, MongoDB, Express.js, Node.js, jQuery
           </li>
           <li>
-            Timeframe - 1 week
+            Compilers: yarn, npm
           </li>
-        <ul>
-      </h5>
-      <p>
-        I began by mapping out the game-logic and set about building the project design and functionality step-by-step. I created a computer AI which ‘knew’ when it had hit a ship and then calculated whether it had sunk a ship or not, and then fired in the next logical direction that the ship could be placed. I also made sure that no ships could touch each other as per the rules of the game, using a series of conditional statements.
+          <li>
+            Python: Flask
+          </li>
+          <li>
+            Databases: SQL
+          </li>
+          <li>
+            Version Control / Deployment: Heroku, GitHub, Git
+          </li>
+          <li>
+            Methods: RESTful APIs, CRUD, Testing (Mocha)
+          </li>
+          <li>
+            Design/Creative: Adobe PhotoShop, Adobe Illustrator, Adobe Premiere Pro, Ableton
+          </li>
+        </ul>
+      </section>
+      <section class="experience" data-aos="zoom-in-left">
+        <h1>
+          Experience
+        </h1>
+        <h2>
+          General Assembly: Web Developement Immersive Course
+        </h2>
+        <h3>
+          January 2019 - April 2019
+        </h3>
+        <p>
+          <ul>
+            <li>
+              Group-based weeklong projects building applications, gained
+              cooperative skills working in teams as well as project managing in an
+              agile environment.
+            </li>
+            <li>
+              Learnt fundamentals of JavaScript, HTML, CSS, Python as well as SQL
+              and MongoDB.
+            </li>
+            <li>
+              Created responsive webpages with HTML, CSS, Javascript, React
+            </li>
+            <li>
+              Designing complex single page dynamic web applications
+            </li>
+            <li>
+              Creating and deploying full-stack web application
+            </li>
+            <li>
+              Version control with Git
+            </li>
+          </ul>
+        </p>
+      </section>
+      <section class="projects">
+        <h1>
+          Projects
+        </h1>
+        <h3>
+          Project 4 - YouBet - Solo Project
+        </h3>
+        <h5>
+          <ul>
+            <li>
+              Full-Stack Application
+            </li>
+            <li>
+              Technologies - Flask, Python, SQLAlchemy, React
+            </li>
+            <li>
+              Timeframe - 1 week
+            </li>
+            <ul>
+            </h5>
+            <p>
+              I took on the project solo in order to cement all the skills I had learnt over the course. I created an application that took data from YouTube’s API and created a marketplace for buying and selling videos with game credit. The biggest challenge was creating my own back-end models that referenced YouTube’s data, but added prices to each video.
+              <p>Readme:</p>
+              <p>Deployed Project: https://you-bet.herokuapp.com/</p>
+            </p>
+            <h3>
+              Project 3 - Player Connect - Group Project
+            </h3>
+            <h5>
+              <ul>
+                <li>
+                  Full-Stack Application
+                </li>
+                <li>
+                  Technologies - React, Express, MongoDB
+                </li>
+                <li>
+                  Timeframe - 1 week
+                </li>
+                <ul>
+                </h5>
+                <p>
+                  In a team of three we built a Full-Stack gaming social network application that used an external API (IGDB) to gather game data. We were able to add a reference to each game into our back-end, and attach our own comments and ratings models to that reference. We also created a live chatbox with socket.io so users could chat live on the app, as well as creating user profiles and linking through users and comments so the site was a fully cyclical experience.
 
-        <p>Readme: https://github.com/henry-stroud/wdi-project-1</p>
-        <p>Deployed Project: https://henry-stroud.github.io/wdi-project-1/</p>
-      </p>
-    </section>
-    <section class="contact">
-      <h1>
-        Contact
-      </h1>
-      <ul>
-        <li>
-          Email: henry.james.stroud@gmail.com
-        </li>
-        <li>
-          Github: github.com/henry-stroud
-        </li>
-        <li>
-          LinkedIn: linkedin.com/in/henry-stroud/
-        </li>
-      </ul>
-    </section>
-  </main>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
- <script>
-   AOS.init({
-     duration: 2000,
-     once: true,
-   });
- </script>
-</body>
-</html>
+                  <p>Readme:</p>
+                  <p>Deployed Project: http://player-connect.herokuapp.com/</p>
+                </p>
+                <h3>
+                  Project 2 - Artistify - Pair Project
+                </h3>
+                <h5>
+                  <ul>
+                    <li>
+                      Front-End Application
+                    </li>
+                    <li>
+                      Technologies - React, External API
+                    </li>
+                    <li>
+                      Timeframe - 3 days
+                    </li>
+                    <ul>
+                    </h5>
+                    <p>
+                      We chose to use 4 APIs, Spotify, LastFM, MusixMatch and Mapbox, in order to create an application with which you can search any artist in the world and it will display their top 10 tracks, biography, where they are from and if they are on tour or not. The project was a success and it was interesting working in a pair, using teletype on our text editor to share code simultaneously.
+
+                      <p>Readme:</p>
+                      <p>Deployed Project: https://artistifyapii.herokuapp.com</p>
+                    </p>
+                    <h3>
+                      Project 1 - Battleships - Solo Project
+                    </h3>
+                    <h5>
+                      <ul>
+                        <li>
+                          Front-End Application
+                        </li>
+                        <li>
+                          Technologies - JavaScript, HTML, CSS
+                        </li>
+                        <li>
+                          Timeframe - 1 week
+                        </li>
+                        <ul>
+                        </h5>
+                        <p>
+                          I began by mapping out the game-logic and set about building the project design and functionality step-by-step. I created a computer AI which ‘knew’ when it had hit a ship and then calculated whether it had sunk a ship or not, and then fired in the next logical direction that the ship could be placed. I also made sure that no ships could touch each other as per the rules of the game, using a series of conditional statements.
+
+                          <p>Readme: https://github.com/henry-stroud/wdi-project-1</p>
+                          <p>Deployed Project: https://henry-stroud.github.io/wdi-project-1/</p>
+                        </p>
+                      </section>
+                      <section class="contact">
+                        <h1>
+                          Contact
+                        </h1>
+                        <ul>
+                          <li>
+                            Email: henry.james.stroud@gmail.com
+                          </li>
+                          <li>
+                            Github: github.com/henry-stroud
+                          </li>
+                          <li>
+                            LinkedIn: linkedin.com/in/henry-stroud/
+                          </li>
+                        </ul>
+                      </section>
+                    </main>
+                    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                    <script>
+                    AOS.init({
+                      duration: 2000,
+                      once: true,
+                    })
+                    </script>
+                    <script src="./anime-master/lib/anime.min.js"></script>
+                    <script src="snap.svg-min.js"></script>
+                  </body>
+                  </html>
