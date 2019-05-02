@@ -41,6 +41,37 @@ body {
         }
       }
     }
+    section.skills {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 150vh;
+      div#skill-title {
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 300%;
+        font-weight: 200;
+        h2 {
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
+
+
+[data-aos="underline"] {
+  color: #fff;
+  height: 1%;
+  width: 0%;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 1);
+  transition-property: width;
+  &.aos-animate {
+    width: 100%;
   }
 }
 
@@ -60,6 +91,13 @@ body {
   }
 }
 
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .console-underscore {
   background-color: #031e43;
@@ -75,18 +113,6 @@ body {
   background-color: #031e43;
 }
 
-.about {
-  width: 25%;
-  text-align: justify;
-}
-
-.about-header {
-  font-size: 500%;
-  span {
-    color: tomato;
-  }
-}
-
 .react-logo {
   height: 100px;
   width: 100px;
@@ -100,18 +126,18 @@ body {
     stroke: white;
     stroke-width: 7;
     stroke-dasharray: 2400;
-    stroke-dashoffset: 2400;
-    animation: draw 4s linear forwards;
-    animation-delay: 1s;
+    // stroke-dashoffset: 2400;
+    // animation: draw 4s linear forwards;
+    // animation-delay: 1s;
   }
   circle {
     fill-opacity: 0;
     stroke: white;
     stroke-width: 7;
     stroke-dasharray: 2400;
-    stroke-dashoffset: 2400;
-    animation: draw 4s linear forwards;
-    animation-delay: 4s;
+    // stroke-dashoffset: 2400;
+    // animation: draw 4s linear forwards;
+    // animation-delay: 4s;
   }
 }
 
@@ -123,9 +149,9 @@ body {
     stroke: white;
     stroke-width: 3;
     stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: draw 5s linear forwards;
-    animation-delay: 2s;
+    // stroke-dashoffset: 2000;
+    // animation: draw 5s linear forwards;
+    // animation-delay: 2s;
   }
 }
 
@@ -137,12 +163,11 @@ body {
     stroke: white;
     stroke-width: 3;
     stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: draw 4s linear forwards;
-    animation-delay: 3s;
+    // stroke-dashoffset: 2000;
+    // animation: draw 4s linear forwards;
+    // animation-delay: 3s;
   }
 }
-
 
 
 #js {
@@ -153,19 +178,46 @@ body {
     stroke: white;
     stroke-width: 3;
     stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: draw 7s linear forwards;
-    animation-delay: 1s;
+    // stroke-dashoffset: 2000;
+    // animation: draw 7s linear forwards;
+    // animation-delay: 1s;
   }
 }
 
 
-
 .logos {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#myChart {
+  transform: scale(1);
+}
+
+[data-aos="draw"] {
+  stroke-dashoffset: 2400;
+  transition-property: stroke-dashoffset;
+  &.aos-animate {
+    stroke-dashoffset: 0;
+  }
+}
+
+circle.swatch {
+  display: none;
+}
+text.label {
+  display: none;
+}
+
+h2.circle-overlay__title {
+  display: none;
+}
+
+foreignobject.circle-overlay.hidden {
+  display: none;
 }
 
 @keyframes draw {

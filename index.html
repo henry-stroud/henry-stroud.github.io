@@ -2,18 +2,24 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <script src="js/d3.min.js"></script>
+  <script src="js/d3-legend.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./css/favicon.ico" type="image/x-icon"/ >
   <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.4.0.min.js"
   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
   <script type="text/javascript" src="./main.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <title>Henry Stroud</title>
+  <title>Henry Stroud | Web Developer</title>
 </head>
 <body>
   <header>
@@ -35,18 +41,16 @@
         <p id="scroll" class="scroll-down hidden">scroll down</p>
       </div>
     </section>
-    <section class="about" data-aos="fade-right">
-      <div class="about-header">
-        <span>About</span>
+    <section class="skills">
+      <div class="custom-underline" id="skill-title" data-aos="fade-right">
+        <h2>Skills</h2>
+        <div data-aos="underline">
+          &nbsp
+        </div>
       </div>
-      <p>
-        My previous role as a music publicist gave me huge insight into the world of client based project management and team coordination, both locally and internationally. Over the course of three years, I connected artists and festivals with journalists worldwide, creating profile pieces and magazine features to be delivered on strict timeframes.
-
-        Moving into web development was a natural progression for me. I have always had a keen interest in technology and working out new software in my spare time. I’ve taught myself Adobe Photoshop, Illustrator, and Premiere Pro and have used these skills extensively in my director role at Bade Records. I wanted to link my passion for tech with my ability to learn new skills, and the WDI course at General Assembly was the next logical step in my career.
-      </p>
-    </section>
-    <section class="skills" data-aos="slide-up">
-      <div class="logos">
+      <div class="logos" data-aos="draw" data-aos-delay="5000"
+    data-aos-duration="3000"
+    data-aos-easing="ease-in-out">
         <svg id="js" width="100" height="100" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><path d="M0 0h256v256H0V0z" fill="#F7DF1E"/><path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"/></svg>
 
         <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 1001.13 890.65"><defs><style>.cls-1{fill:none;}.cls-2{fill:none;stroke:#00d8ff;stroke-miterlimit:10;stroke-width:24px;}</style></defs><title>Artboard 1</title>
@@ -83,35 +87,8 @@
             </g>
           </svg>
         </div>
-        <h2>
-          Skills
-        </h2>
-        <ul>
-          <li>
-            Front-End: HTML5, CSS3, SCSS, Bulma
-          </li>
-          <li>
-            JavaScript: ES6, React, MongoDB, Express.js, Node.js, jQuery
-          </li>
-          <li>
-            Compilers: yarn, npm
-          </li>
-          <li>
-            Python: Flask
-          </li>
-          <li>
-            Databases: SQL
-          </li>
-          <li>
-            Version Control / Deployment: Heroku, GitHub, Git
-          </li>
-          <li>
-            Methods: RESTful APIs, CRUD, Testing (Mocha)
-          </li>
-          <li>
-            Design/Creative: Adobe PhotoShop, Adobe Illustrator, Adobe Premiere Pro, Ableton
-          </li>
-        </ul>
+        <!-- <canvas id="myChart"></canvas> -->
+        <svg class="bubble" width="100%" height="700" font-family="sans-serif" text-anchor="middle"></svg>
       </section>
       <section class="experience" data-aos="zoom-in-left">
         <h1>
@@ -261,11 +238,9 @@
                     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
                     <script>
                     AOS.init({
-                      duration: 2000,
+                      duration: 3000,
                       once: true,
                     })
                     </script>
-                    <script src="./anime-master/lib/anime.min.js"></script>
-                    <script src="snap.svg-min.js"></script>
                   </body>
                   </html>
