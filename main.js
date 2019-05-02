@@ -361,7 +361,18 @@ window.addEventListener('DOMContentLoaded', () => {
   const youBet = document.querySelector('#youbet-image')
 
   youBet.addEventListener('click', () => {
-    
+
   })
+
+  // $(function() {
+  //   $(window).scroll(function () {
+  //     if ($(this).scrollTop() > 500) {
+  //       $('*').addClass('changeColor')
+  //     }
+  //     if ($(this).scrollTop() < 500) {
+  //       $('*').removeClass('changeColor')
+  //     }
+  //   })
+  // })
 
 })

@@ -293,6 +293,10 @@ foreignobject.circle-overlay.hidden {
   display: none;
 }
 
+.changeColor {
+   background: white;
+}
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
