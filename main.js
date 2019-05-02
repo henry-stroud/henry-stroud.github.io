@@ -331,6 +331,7 @@ window.addEventListener('DOMContentLoaded', () => {
           .select('circle')
           .attr('r', d => d.r)
       }
+      this.destroy()
     },
     offset: '80%'
   })
