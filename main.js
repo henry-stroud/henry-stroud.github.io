@@ -358,6 +358,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  document.querySelector('#youbet-image')
+  const youBet = document.querySelector('#youbet-image')
+
+  youBet.addEventListener('click', () => {
+    
+  })
 
 })
