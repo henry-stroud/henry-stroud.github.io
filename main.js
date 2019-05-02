@@ -1,4 +1,4 @@
-/* global anime, Waypoint, Chart, d3 */
+/* global anime, Waypoint, Chart, d3, Glider */
 window.addEventListener('DOMContentLoaded', () => {
 
   consoleText(['Henry Stroud', 'Web Developer'], 'text',['tomato'])
@@ -240,7 +240,7 @@ window.addEventListener('DOMContentLoaded', () => {
         .attr('r', 0)
         .style('fill', d => d3.rgb(0, 128, 0, 0))
         .style('stroke', d => d3.rgb('#ffffff'))
-        .transition().duration(2000).ease(d3.easeCubic)
+        .transition().duration(5000).ease(d3.easeCubic)
         .tween('circleIn', (d) => {
           const i = d3.interpolateNumber(0, d.radius)
           return (t) => {
@@ -333,8 +333,31 @@ window.addEventListener('DOMContentLoaded', () => {
       }
       this.destroy()
     },
-    offset: '80%'
+    offset: '50%'
   })
 
+  new Waypoint({
+    element: document.querySelector('.glider'),
+    handler: function() {
+      // anime({
+      //   targets: '#skill-title',
+      //   translateX: 250,
+      //   duration: 3000
+      // })
+    },
+    offset: '100%'
+  })
+
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: '1',
+    dots: '#dots',
+    draggable: false,
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    }
+  })
+
+  document.querySelector('#youbet-image')
 
 })

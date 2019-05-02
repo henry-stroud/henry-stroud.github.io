@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #031e43;
@@ -56,6 +60,24 @@ body main section.skills div#skill-title {
   font-weight: 200;
 }
 body main section.skills div#skill-title h2 {
+  font-weight: 200;
+}
+body main section.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150vh;
+}
+body main section.projects div#projects-title {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 300%;
+  font-weight: 200;
+}
+body main section.projects div#projects-title h2 {
   font-weight: 200;
 }
 
@@ -175,11 +197,26 @@ body main section.skills div#skill-title h2 {
   transform: scale(1);
 }
 
+#youbet-logo path {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-width: 30;
+  stroke-dasharray: 8600;
+}
+
 [data-aos=draw] {
   stroke-dashoffset: 2400;
   transition-property: stroke-dashoffset;
 }
 [data-aos=draw].aos-animate {
+  stroke-dashoffset: 0;
+}
+
+[data-aos=draw-youtube] {
+  stroke-dashoffset: 8700;
+  transition-property: stroke-dashoffset;
+}
+[data-aos=draw-youtube].aos-animate {
   stroke-dashoffset: 0;
 }
 
@@ -193,6 +230,30 @@ text.label {
 
 h2.circle-overlay__title {
   display: none;
+}
+
+#chevron-right {
+  background: none;
+}
+
+#chevron-left {
+  background: none;
+}
+
+figure {
+  padding: 1.5em;
+  padding-top: 0px;
+}
+figure img {
+  border-radius: 30px;
+}
+
+#youbet-logo {
+  padding-left: 30px;
+}
+
+.glider-contain {
+  width: 75%;
 }
 
 foreignobject.circle-overlay.hidden {

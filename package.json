@@ -2,6 +2,7 @@
   "dependencies": {
     "animejs": "^3.0.1",
     "aos": "^3.0.0-beta.6",
+    "slick-carousel": "^1.8.1",
     "snapsvg": "^0.5.1"
   }
 }
