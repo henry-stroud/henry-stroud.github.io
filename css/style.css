@@ -79,6 +79,7 @@ body main section.projects div#projects-title {
 }
 body main section.projects div#projects-title h2 {
   font-weight: 200;
+  padding-bottom: 20px;
 }
 body main section.player-connect-container {
   display: flex;
@@ -281,7 +282,7 @@ body main section.player-connect-container {
 }
 
 [data-aos=draw-battleship] {
-  stroke-dashoffset: 27640.380859375;
+  stroke-dashoffset: 21773.720703125;
   transition-property: stroke-dashoffset;
 }
 [data-aos=draw-battleship].aos-animate {
@@ -311,6 +312,9 @@ h2.circle-overlay__title {
 figure {
   padding: 1.5em;
   padding-top: 0px;
+}
+figure a {
+  cursor: pointer;
 }
 figure img {
   border-radius: 30px;
@@ -346,6 +350,7 @@ svg.bubble {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 30px;
 }
 
 svg {

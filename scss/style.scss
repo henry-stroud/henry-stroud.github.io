@@ -78,6 +78,7 @@ body {
         font-weight: 200;
         h2 {
           font-weight: 200;
+          padding-bottom: 20px;
         }
       }
     }
@@ -320,7 +321,7 @@ body {
 }
 
 [data-aos="draw-battleship"] {
-  stroke-dashoffset: 27640.380859375;
+  stroke-dashoffset: 21773.720703125;
   transition-property: stroke-dashoffset;
   &.aos-animate {
     stroke-dashoffset: 0;
@@ -346,6 +347,9 @@ h2.circle-overlay__title {
 }
 
 figure {
+  a {
+    cursor: pointer;
+  }
   padding: 1.5em;
   padding-top: 0px;
   img {
@@ -385,11 +389,13 @@ svg.bubble {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 30px;
 }
 
 svg {
   background: none;
 }
+
 
 
 @keyframes draw {
