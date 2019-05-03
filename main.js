@@ -1,4 +1,4 @@
-/* global anime, Waypoint, Chart, d3, Glider */
+/* global Waypoint, d3, Glider */
 window.addEventListener('DOMContentLoaded', () => {
 
   consoleText(['Henry Stroud', 'Web Developer'], 'text',['tomato'])
@@ -165,8 +165,8 @@ window.addEventListener('DOMContentLoaded', () => {
       const svg = d3.select('.bubble')
       const width = document.body.clientWidth
       const height = +svg.attr('height')
-      const centerX = width * 0.5
-      const centerY = height * 0.5
+      const centerX = width * 0.25
+      const centerY = height * 0.25
       const strength = 0.05
 
       const format = d3.format(',d')
@@ -179,7 +179,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const forceCollide = d3.forceCollide(d => d.r + 1)
 
-      // use the force
       const simulation = d3.forceSimulation()
         .force('charge', d3.forceManyBody())
         .force('collide', forceCollide)
@@ -238,8 +237,8 @@ window.addEventListener('DOMContentLoaded', () => {
       node.append('circle')
         .attr('id', d => d.id)
         .attr('r', 0)
-        .style('fill', d => d3.rgb(0, 128, 0, 0))
-        .style('stroke', d => d3.rgb('#ffffff'))
+        .style('fill', () => d3.rgb(0, 128, 0, 0))
+        .style('stroke', () => d3.rgb('#ffffff'))
         .transition().duration(5000).ease(d3.easeCubic)
         .tween('circleIn', (d) => {
           const i = d3.interpolateNumber(0, d.radius)
@@ -283,7 +282,7 @@ window.addEventListener('DOMContentLoaded', () => {
         .scale(scaleColor)
         .shape('circle')
 
-      const legend = svg.append('g')
+      svg.append('g')
         .classed('legend-color', true)
         .attr('text-anchor', 'start')
         .attr('transform','translate(20,30)')
@@ -300,7 +299,7 @@ window.addEventListener('DOMContentLoaded', () => {
         .shapePadding(10)
         .labelAlign('end')
 
-      const legend2 = svg.append('g')
+      svg.append('g')
         .classed('legend-size', true)
         .attr('text-anchor', 'start')
         .attr('transform', 'translate(150, 25)')
@@ -337,16 +336,42 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
   new Waypoint({
-    element: document.querySelector('.glider'),
+    element: document.querySelector('.logos'),
     handler: function() {
-      // anime({
-      //   targets: '#skill-title',
-      //   translateX: 250,
-      //   duration: 3000
-      // })
+      $('.logos').attr( 'data-aos', 'undraw' )
     },
-    offset: '100%'
+    offset: '30%'
   })
+
+  const path = document.querySelector('#player-connect path')
+  const totalLength = path.getTotalLength()
+
+  const path2 = document.querySelector('#youbet-logo path')
+  const totalLength2 = path2.getTotalLength()
+
+  const path3 = document.querySelector('#logo-a path')
+  const totalLength3 = path3.getTotalLength()
+
+  const path4 = document.querySelector('#battleship path')
+  const totalLength4 = path4.getTotalLength()
+
+  console.log(totalLength4, 'battleship')
+
+  console.log(totalLength3, 'logo a')
+
+  console.log(totalLength2, 'youbet path ')
+
+  console.log(totalLength, 'player connect path')
+
+  // new Waypoint({
+  //   element: document.querySelector('.logos'),
+  //   handler: function() {
+  //     $('.logos').css({
+  //       display: 'none'
+  //     })
+  //   },
+  //   offset: '-20%'
+  // })
 
   new Glider(document.querySelector('.glider'), {
     slidesToShow: '1',
@@ -363,6 +388,53 @@ window.addEventListener('DOMContentLoaded', () => {
   youBet.addEventListener('click', () => {
 
   })
+
+  // const dots = document.querySelectorAll('#dots')
+  // console.log(dots, 'THESE')
+
+  // if (dots.classList.includes('active')) {
+  //   console.log(dots, 'activo')
+  // }
+
+  const allDots = document.querySelectorAll('#dots')
+
+  console.log(allDots[0].childNodes, 'dots')
+
+  const $youBetLogo = $('.youbet-logo')
+  const $playerConnectLogo = $('.player-connect-logo')
+
+
+  // allDots[0].childNodes.forEach((x) => {
+  //   x.addEventListener('click', (e) => {
+  //     console.log(e.target.getAttribute('data-index'))
+  //     if (e.target.getAttribute('data-index') === '0') {
+  //       console.log(e.target, 'this node is active')
+  //       $youBetLogo.removeClass('removed')
+  //       $youBetLogo.addClass('display')
+  //       $playerConnectLogo.removeClass('display')
+  //       $playerConnectLogo.addClass('removed')
+  //     }
+  //     if (e.target.getAttribute('data-index') === '1') {
+  //       console.log(e.target, 'this node is active')
+  //       $youBetLogo.addClass('removed')
+  //       $youBetLogo.removeClass('display')
+  //       $playerConnectLogo.addClass('display')
+  //       $playerConnectLogo.removeClass('removed')
+  //     }
+  //     if (e.target.getAttribute('data-index') === '2') {
+  //       console.log(e.target, 'this node is active')
+  //       $youBetLogo.addClass('removed')
+  //       $youBetLogo.removeClass('display')
+  //     }
+  //     if (e.target.getAttribute('data-index') === '3') {
+  //       console.log(e.target, 'this node is active')
+  //       $youBetLogo.addClass('removed')
+  //       $youBetLogo.removeClass('display')
+  //     }
+  //   })
+  // })
+
+
 
   // $(function() {
   //   $(window).scroll(function () {

@@ -50,7 +50,7 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      height: 150vh;
+      height: 160vh;
       div#skill-title {
         padding-bottom: 30px;
         display: flex;
@@ -80,6 +80,12 @@ body {
           font-weight: 200;
         }
       }
+    }
+    section.player-connect-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 }
@@ -127,6 +133,14 @@ body {
 .hidden {
   opacity: 0;
   background-color: #031e43;
+}
+
+.removed {
+  display: none;
+}
+
+.display {
+  display: block;
 }
 
 .visible {
@@ -212,6 +226,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #myChart {
@@ -233,7 +248,34 @@ body {
     fill-opacity: 0;
     stroke: white;
     stroke-width: 30;
-    stroke-dasharray: 8600;
+    stroke-dasharray: 10867.732421875;
+  }
+}
+
+#player-connect {
+  path {
+    fill-opacity: 0;
+    stroke: white;
+    stroke-width: 30;
+    stroke-dasharray: 19016.759765625;
+  }
+}
+
+#logo-a {
+  path {
+    fill-opacity: 0;
+    stroke: white;
+    stroke-width: 30;
+    stroke-dasharray: 27640.380859375;
+  }
+}
+
+#battleship {
+  path {
+    fill-opacity: 0;
+    stroke: white;
+    stroke-width: 30;
+    stroke-dasharray: 21773.720703125;
   }
 }
 
@@ -245,8 +287,40 @@ body {
   }
 }
 
+[data-aos="undraw"] {
+  stroke-dashoffset: 0;
+  transition-property: stroke-dashoffset;
+  &.aos-animate {
+    stroke-dashoffset: 2400;
+  }
+}
+
 [data-aos="draw-youtube"] {
-  stroke-dashoffset: 8700;
+  stroke-dashoffset: 10867.732421875;
+  transition-property: stroke-dashoffset;
+  &.aos-animate {
+    stroke-dashoffset: 0;
+  }
+}
+
+[data-aos="draw-playerconnect"] {
+  stroke-dashoffset: 19016.759765625;
+  transition-property: stroke-dashoffset;
+  &.aos-animate {
+    stroke-dashoffset: 0;
+  }
+}
+
+[data-aos="draw-logo-a"] {
+  stroke-dashoffset: 27640.380859375;
+  transition-property: stroke-dashoffset;
+  &.aos-animate {
+    stroke-dashoffset: 0;
+  }
+}
+
+[data-aos="draw-battleship"] {
+  stroke-dashoffset: 27640.380859375;
   transition-property: stroke-dashoffset;
   &.aos-animate {
     stroke-dashoffset: 0;
@@ -296,6 +370,27 @@ foreignobject.circle-overlay.hidden {
 .changeColor {
    background: white;
 }
+
+svg.bubble {
+  overflow: visible;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.project-logos-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+svg {
+  background: none;
+}
+
 
 @keyframes draw {
   to {
