@@ -14,13 +14,18 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #031e43;
 }
-body header nav {
+body header div.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+body header div.navbar nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 20px;
 }
-body header nav a {
+body header div.navbar nav a {
   text-decoration: none;
 }
 body main {
@@ -79,7 +84,6 @@ body main section.projects div#projects-title {
 }
 body main section.projects div#projects-title h2 {
   font-weight: 200;
-  padding-bottom: 20px;
 }
 body main section.player-connect-container {
   display: flex;
@@ -321,11 +325,21 @@ figure img {
 }
 
 #youbet-logo {
-  padding-left: 30px;
+  min-width: 100px;
 }
 
 .glider-contain {
-  width: 75%;
+  width: 60%;
+}
+
+.glider {
+  min-width: 300px;
+}
+
+.glider-dot:hover,
+.glider-dot:focus,
+.glider-dot.active {
+  background: #fc644d;
 }
 
 foreignobject.circle-overlay.hidden {
@@ -344,6 +358,10 @@ svg.bubble {
   align-items: flex-end;
 }
 
+svg {
+  background: none;
+}
+
 .project-logos-container {
   width: 100%;
   display: flex;
@@ -353,8 +371,9 @@ svg.bubble {
   padding: 30px;
 }
 
-svg {
-  background: none;
+#player-connect {
+  min-width: 100px;
+  max-width: 200px;
 }
 
 @keyframes draw {

@@ -400,8 +400,108 @@ window.addEventListener('DOMContentLoaded', () => {
 
   console.log(allDots[0].childNodes, 'dots')
 
+  const dotz = document.querySelectorAll('#dots')
+
+  const youBetButton = dotz[0].childNodes[0]
+  const playerConnectButton = dotz[0].childNodes[1]
+  const artistifyButton = dotz[0].childNodes[2]
+  const battleshipButton = dotz[0].childNodes[3]
+  // console.log(dotz[0].childNodes[0], 'dotz')
+
+
+  const $battleshipLogo = $('.battleship-logo')
   const $youBetLogo = $('.youbet-logo')
   const $playerConnectLogo = $('.player-connect-logo')
+  const $aLogo = $('.a-logo')
+
+  function workOnClassAdd(name) {
+    console.log('I\'m triggered when the class is added, index number' + name.targetNode.dataset.index)
+    if (name.targetNode.dataset.index === '0') {
+      $youBetLogo.addClass('display')
+      $youBetLogo.removeClass('removed')
+    }
+    if (name.targetNode.dataset.index === '1') {
+      $playerConnectLogo.addClass('display')
+      $playerConnectLogo.removeClass('removed')
+    }
+    if (name.targetNode.dataset.index === '2') {
+      $aLogo.addClass('display')
+      $aLogo.removeClass('removed')
+    }
+    if (name.targetNode.dataset.index === '3') {
+      $battleshipLogo.addClass('display')
+      $battleshipLogo.removeClass('removed')
+    }
+  }
+
+  function workOnClassRemoval(name) {
+    console.log('I\'m triggered when the class is removed, index number' + name.targetNode.dataset.index)
+    if (name.targetNode.dataset.index === '0') {
+      $youBetLogo.addClass('removed')
+      $youBetLogo.removeClass('display')
+    }
+    if (name.targetNode.dataset.index === '1') {
+      $playerConnectLogo.addClass('removed')
+      $playerConnectLogo.removeClass('display')
+    }
+    if (name.targetNode.dataset.index === '2') {
+      $aLogo.addClass('removed')
+      $aLogo.removeClass('display')
+    }
+    if (name.targetNode.dataset.index === '3') {
+      $battleshipLogo.addClass('removed')
+      $battleshipLogo.removeClass('display')
+    }
+  }
+
+  class ClassWatcher {
+
+    constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
+      this.targetNode = targetNode
+      this.classToWatch = classToWatch
+      this.classAddedCallback = classAddedCallback
+      this.classRemovedCallback = classRemovedCallback
+      this.observer = null
+      this.lastClassState = targetNode.classList.contains(this.classToWatch)
+
+      this.init()
+    }
+
+    init() {
+      this.observer = new MutationObserver(this.mutationCallback)
+      this.observe()
+    }
+
+    observe() {
+      this.observer.observe(this.targetNode, { attributes: true })
+    }
+
+    disconnect() {
+      this.observer.disconnect()
+    }
+
+    mutationCallback = mutationsList => {
+      for(const mutation of mutationsList) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          const currentClassState = mutation.target.classList.contains(this.classToWatch)
+          if(this.lastClassState !== currentClassState) {
+            this.lastClassState = currentClassState
+            if(currentClassState) {
+              this.classAddedCallback(this)
+            } else {
+              this.classRemovedCallback(this)
+            }
+          }
+        }
+      }
+    }
+  }
+
+  new ClassWatcher(youBetButton, 'active', workOnClassAdd, workOnClassRemoval)
+  new ClassWatcher(playerConnectButton, 'active', workOnClassAdd, workOnClassRemoval)
+  new ClassWatcher(artistifyButton, 'active', workOnClassAdd, workOnClassRemoval)
+  new ClassWatcher(battleshipButton, 'active', workOnClassAdd, workOnClassRemoval)
+
 
 
   // allDots[0].childNodes.forEach((x) => {
@@ -446,5 +546,13 @@ window.addEventListener('DOMContentLoaded', () => {
   //     }
   //   })
   // })
+
+//   var svg = document.querySelector("#player-connect");
+//
+// svg.setAttribute("preserveAspectRatio", "xMinYMin meet");
+// svg.setAttribute("viewBox", [0, 0, svg.getAttribute("width"), svg.getAttribute("height")].join(" "));
+//
+// svg.removeAttribute("width");
+// svg.removeAttribute("height");
 
 })
