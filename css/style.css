@@ -91,6 +91,53 @@ body main section.player-connect-container {
   justify-content: flex-start;
   align-items: center;
 }
+body main section.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 120vh;
+}
+body main section.experience div#experience-title {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 300%;
+  font-weight: 200;
+}
+body main section.experience div#experience-title h2 {
+  font-weight: 200;
+}
+body main section.experience div.experience-container-large {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+body main section.experience div.experience-container {
+  display: flex;
+  padding: 20px;
+  width: 33%;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  min-width: 300px;
+}
+body main section.experience div.experience-container h4 {
+  padding-top: 30px;
+  color: tomato;
+}
+body main section.experience div.experience-container h5 {
+  padding: 10px;
+}
+body main section.experience div.experience-container h6 {
+  padding-bottom: 10px;
+}
+body main section.experience div.experience-container p {
+  font-size: 90%;
+}
 
 [data-aos=underline] {
   color: #fff;

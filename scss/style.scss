@@ -92,6 +92,53 @@ body {
       justify-content: flex-start;
       align-items: center;
     }
+    section.experience {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 120vh;
+      div#experience-title {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 300%;
+        font-weight: 200;
+        h2 {
+          font-weight: 200;
+        }
+      }
+      div.experience-container-large {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
+      div.experience-container {
+        display: flex;
+        padding: 20px;
+        width: 33%;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        min-width: 300px;
+        h4 {
+          padding-top: 30px;
+          color: tomato;
+        }
+        h5 {
+          padding: 10px;
+        }
+        h6 {
+          padding-bottom: 10px;
+        }
+        p {
+          font-size: 90%;
+        }
+      }
+    }
   }
 }
 
