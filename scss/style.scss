@@ -447,6 +447,15 @@ svg {
   background: none;
 }
 
+label {
+  display: block;
+  width: 5em;
+}
+
+.ui-tooltip-content {
+  background: white;
+  color: black;
+}
 
 .project-logos-container {
   width: 100%;

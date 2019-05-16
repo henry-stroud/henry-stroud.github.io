@@ -330,6 +330,30 @@ window.addEventListener('DOMContentLoaded', () => {
           .select('circle')
           .attr('r', d => d.r)
       }
+
+      // $( document ).tooltip()
+      const $languageLogo = $('image.node-icon')
+      $languageLogo.each((index, element) => {
+        $(element).css({
+          cursor: 'pointer'
+        })
+        $(element).attr('title', `${element.attributes['clip-path'].value.toString().split('.')[1].replace(')','')}`)
+        $(element).tooltip({
+          classes: {
+            'ui-tooltip': 'ui-corner-all ui-widget-shadow',
+            hide: { effect: 'explode', duration: 1000 },
+            position: {
+              my: 'center',
+              at: 'center'
+            }
+          }
+        })
+      })
+      console.log($languageLogo)
+      $languageLogo.on('mouseover', (e) => {
+        console.log('hello')
+        console.log(e.target.attributes['clip-path'].value)
+      })
       this.destroy()
     },
     offset: '50%'
@@ -342,6 +366,8 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     offset: '30%'
   })
+
+
 
   const path = document.querySelector('#player-connect path')
   const totalLength = path.getTotalLength()
