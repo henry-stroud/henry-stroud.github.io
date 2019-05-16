@@ -54,9 +54,10 @@ body main section.skills {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 160vh;
+  height: 155vh;
 }
 body main section.skills div#skill-title {
+  padding-top: 50px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -72,10 +73,11 @@ body main section.projects {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 150vh;
+  height: 130vh;
 }
 body main section.projects div#projects-title {
   padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,6 +139,34 @@ body main section.experience div.experience-container h6 {
 }
 body main section.experience div.experience-container p {
   font-size: 90%;
+}
+body main section.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 120vh;
+}
+body main section.contact div#contact-title {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 300%;
+  font-weight: 200;
+}
+body main section.contact div#contact-title h2 {
+  font-weight: 200;
+}
+body main section.contact div.image-text-container {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main section.contact div.image-text-container div.contact-details {
+  padding-left: 30px;
 }
 
 [data-aos=underline] {
