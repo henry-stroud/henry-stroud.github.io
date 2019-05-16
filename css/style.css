@@ -141,7 +141,7 @@ body main section.experience div.experience-container p {
 
 [data-aos=underline] {
   color: #fff;
-  height: 1%;
+  height: 2px;
   width: 0%;
   left: 5%;
   background-color: white;
