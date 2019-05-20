@@ -186,14 +186,29 @@ body main section.contact div#contact-title h2 {
   font-weight: 200;
 }
 body main section.contact div.image-text-container {
-  padding-top: 80px;
+  padding-top: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body main section.contact div.image-text-container div.contact-details {
-  padding-left: 30px;
+body main section.contact div.image-text-container .icons {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+body main section.contact div.image-text-container .icons .fab {
+  padding: 11px;
+}
+body main section.contact div.image-text-container .icons .far {
+  padding: 12px;
+}
+body main section.contact div.image-text-container .contact-details {
+  padding-left: 10px;
+  margin-bottom: 3px;
+}
+body main section.contact div.image-text-container .contact-details .contact-link {
+  padding: 10px;
 }
 
 [data-aos=underline] {
