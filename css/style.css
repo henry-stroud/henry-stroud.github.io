@@ -140,12 +140,39 @@ body main section.experience div.experience-container h6 {
 body main section.experience div.experience-container p {
   font-size: 90%;
 }
+body main section.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main section.about div#about-title {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 300%;
+  font-weight: 200;
+}
+body main section.about div#about-title h2 {
+  font-weight: 200;
+}
+body main section.about div.image-text-container {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main section.about div.image-text-container div.about-details {
+  padding-left: 30px;
+}
 body main section.contact {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 120vh;
+  height: 80vh;
 }
 body main section.contact div#contact-title {
   padding-top: 50px;
