@@ -162,7 +162,8 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        width: 50%;
         div.about-details {
           padding-left: 30px;
         }
@@ -173,7 +174,7 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      height: 80vh;
+      height: 100vh;
       div#contact-title {
         padding-top: 50px;
         display: flex;
