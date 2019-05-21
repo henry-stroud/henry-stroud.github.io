@@ -1,7 +1,5 @@
 * {
   font-family: 'Montserrat', sans-serif;
-  background-color: #031e43;
-  color: #fdfdfd;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -14,6 +12,7 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #031e43;
+  color: #fdfdfd;
   header {
     div.navbar {
       position: fixed;
@@ -24,8 +23,10 @@ body {
         flex-direction: row;
         justify-content: space-around;
         padding: 20px;
+        background-color: #031e43;
         a {
           text-decoration: none;
+          color: white;
         }
       }
     }
@@ -209,6 +210,9 @@ body {
           margin-bottom: 3px;
           .contact-link {
             padding: 10px;
+            a {
+              color: white;
+            }
           }
         }
       }
@@ -479,6 +483,7 @@ figure {
   padding-top: 0px;
   img {
     border-radius: 30px;
+    cursor: pointer;
   }
 
 }
@@ -545,8 +550,54 @@ label {
   max-width: 200px;
 }
 
+.overlay-top-youtube {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-inside {
+  background-color: #f4f4f4;
+  color: black;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+  height: 70%;
+  overflow: hidden;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 2s;
+}
+
+.closeBtn {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
   }
 }

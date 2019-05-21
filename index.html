@@ -13,6 +13,7 @@
     <link href="glider.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./css/favicon.ico" type="image/x-icon"/ >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
@@ -24,6 +25,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
     <script src="glider.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script type="text/javascript" src="./main.js"></script>
     <title>Henry Stroud | Web Developer</title>
   </head>
@@ -310,22 +312,40 @@
 
       </div>
         </div>
+        <div class="overlay-top-youtube" id="simple-overlay">
+          <div class="modal-inside">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h2>YouBet</h2>
+            </div>
+            <br>
+            <p>A viral-investment game, where users can invest in YouTube videos with game credits given to them by the site. The aim of the game is to invest in YouTube videos when they are brand new and inexpensive, and then sell them when they hit peak popularity before they start declining in price.</p>
+          </div>
+        </div>
         <div class="glider-contain multiple" data-aos="fadeIn" data-aos-delay="1000">
           <button class="glider-prev">
           <i id="chevron-left" class="fa fa-chevron-left"></i>
           </button>
           <div class="glider">
             <figure id="youbet-image">
-              <a href="https://you-bet.herokuapp.com/" target="_blank"><img src="img/youbet1.png" alt="youbet1"></a>
+              <!-- <a href="https://you-bet.herokuapp.com/" target="_blank"> -->
+                <img src="img/youbet1.png" alt="youbet1">
+              <!-- </a> -->
             </figure>
             <figure>
-              <a href="http://player-connect.herokuapp.com/" target="_blank"><img src="img/player-connect.png" alt="player-connect"></a>
+              <!-- <a href="http://player-connect.herokuapp.com/" target="_blank"> -->
+                <img src="img/player-connect.png" alt="player-connect">
+              <!-- </a> -->
             </figure>
             <figure>
-              <a href="https://artistifyapii.herokuapp.com/" target="_blank"><img src="img/artistify.png" alt="artistify"></a>
+              <!-- <a href="https://artistifyapii.herokuapp.com/" target="_blank"> -->
+                <img src="img/artistify.png" alt="artistify">
+              <!-- </a> -->
             </figure>
             <figure>
-              <a href="https://www.henrystroud.com/wdi-project-1/" target="_blank"><img src="img/battleships.png" alt="battleships"></a>
+              <!-- <a href="https://www.henrystroud.com/wdi-project-1/" target="_blank"> -->
+                <img src="img/battleships.png" alt="battleships">
+              <!-- </a> -->
             </figure>
           </div>
           <button class="glider-next">
@@ -333,6 +353,7 @@
           </button>
           <div id="dots" class="glider-dots"></div>
         </div>
+
       </section>
       <section class="experience" id="experience-section">
         <div id="experience-title" data-aos="fade-right">
@@ -449,9 +470,9 @@
         </div>
         <div class="image-text-container" data-aos="fadeIn" data-aos-delay="200">
           <div class="icons">
+            <i class="far fa-envelope"></i>
             <i class="fab fa-linkedin"></i>
             <i class="fab fa-github"></i>
-            <i class="far fa-envelope"></i>
           </div>
           <div class="contact-details">
             <div class="contact-link">

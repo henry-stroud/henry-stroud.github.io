@@ -331,7 +331,6 @@ window.addEventListener('DOMContentLoaded', () => {
           .attr('r', d => d.r)
       }
 
-      // $( document ).tooltip()
       const $languageLogo = $('image.node-icon')
       $languageLogo.each((index, element) => {
         $(element).css({
@@ -409,11 +408,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  const youBet = document.querySelector('#youbet-image')
-
-  youBet.addEventListener('click', () => {
-
-  })
 
   // const dots = document.querySelectorAll('#dots')
   // console.log(dots, 'THESE')
@@ -532,6 +526,25 @@ window.addEventListener('DOMContentLoaded', () => {
   new ClassWatcher(artistifyButton, 'active', workOnClassAdd, workOnClassRemoval)
   new ClassWatcher(battleshipButton, 'active', workOnClassAdd, workOnClassRemoval)
 
+  const overlay = document.getElementById('simple-overlay')
+
+  const closeBtn = document.getElementsByClassName('closeBtn')[0]
+
+  const youBet = document.querySelector('#youbet-image')
+
+  window.addEventListener('click', (e) => {
+    if(e.target === overlay) {
+      overlay.style.display = 'none'
+    }
+  })
+
+  youBet.addEventListener('click', () => {
+    overlay.style.display = 'block'
+  })
+
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none'
+  })
 
 
   // allDots[0].childNodes.forEach((x) => {
