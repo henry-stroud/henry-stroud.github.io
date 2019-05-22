@@ -23,12 +23,22 @@ body {
         justify-content: space-around;
         padding: 20px;
         background-color: #031e43;
+        @media only screen and (max-width: 650px) {
+            justify-content: flex-start;
+        }
         #burger-menu {
           display: none;
+          cursor: pointer;
+          @media only screen and (max-width: 650px) {
+              display: block;
+          }
         }
         a {
           text-decoration: none;
           color: white;
+          @media only screen and (max-width: 650px) {
+              display: none;
+          }
         }
       }
     }
@@ -630,7 +640,7 @@ label {
       color: black;
     }
     i {
-      cursor: pointer
+      cursor: pointer;
     }
     i:hover, i:focus {
       color: #808080;
@@ -646,17 +656,9 @@ label {
 
 @keyframes modalopen {
   from {
-    opacity: 0
+    opacity: 0;
   }
   to {
-    opacity: 1
-  }
-}
-
-
-
-@media only screen and (max-width: 650px) {
-  #burger-menu {
-    display: block
+    opacity: 1;
   }
 }

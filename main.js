@@ -613,6 +613,14 @@ window.addEventListener('DOMContentLoaded', () => {
     battleshipsOverlay.style.display = 'none'
   })
 
+  // burger menu
+
+  const burger = document.getElementById('burger-menu')
+
+  burger.addEventListener('click', () => {
+    console.log('hello')
+  })
+
 
   // allDots[0].childNodes.forEach((x) => {
   //   x.addEventListener('click', (e) => {
