@@ -146,6 +146,7 @@ body main section.about {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  height: 100vh;
 }
 body main section.about div#about-title {
   padding-top: 50px;
@@ -439,15 +440,15 @@ h2.circle-overlay__title {
 }
 
 figure {
+  flex-shrink: 0;
   padding: 1.5em;
-  padding-top: 0px;
 }
 figure a {
   cursor: pointer;
 }
 figure img {
-  border-radius: 30px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 #youbet-logo {
@@ -466,6 +467,13 @@ figure img {
 .glider-dot:focus,
 .glider-dot.active {
   background: #fc644d;
+}
+
+.glider-prev:hover,
+.glider-next:hover,
+.glider-prev:focus,
+.glider-next:focus {
+  color: tomato;
 }
 
 foreignobject.circle-overlay.hidden {
@@ -512,7 +520,7 @@ label {
   max-width: 200px;
 }
 
-.overlay-top-youtube {
+.overlay-top {
   display: none;
   position: fixed;
   z-index: 10;
@@ -529,8 +537,8 @@ label {
   color: black;
   margin: 10% auto;
   padding: 20px;
-  width: 50%;
-  height: 70%;
+  width: 30%;
+  height: 50%;
   overflow: hidden;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
@@ -547,6 +555,47 @@ label {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.icons-modal {
+  margin-top: 10px;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icons-modal .gitHub-logo-modal {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icons-modal .gitHub-logo-modal i.fab {
+  color: black;
+}
+.icons-modal .gitHub-logo-modal i {
+  cursor: pointer;
+}
+.icons-modal .gitHub-logo-modal i:hover, .icons-modal .gitHub-logo-modal i:focus {
+  color: #808080;
+}
+.icons-modal .link-logo-modal {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icons-modal .link-logo-modal i.fas {
+  color: black;
+}
+.icons-modal .link-logo-modal i {
+  cursor: pointer;
+}
+.icons-modal .link-logo-modal i:hover, .icons-modal .link-logo-modal i:focus {
+  color: #808080;
 }
 
 @keyframes draw {

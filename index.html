@@ -13,15 +13,12 @@
     <link href="glider.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./css/favicon.ico" type="image/x-icon"/ >
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.0.min.js"
       integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
       crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
     <script src="glider.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -312,14 +309,97 @@
 
       </div>
         </div>
-        <div class="overlay-top-youtube" id="simple-overlay">
+        <div class="overlay-top" id="youBet-overlay">
           <div class="modal-inside">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
               <h2>YouBet</h2>
+              <small>Flask | Python | SQLAlchemy | React </small>
             </div>
             <br>
             <p>A viral-investment game, where users can invest in YouTube videos with game credits given to them by the site. The aim of the game is to invest in YouTube videos when they are brand new and inexpensive, and then sell them when they hit peak popularity before they start declining in price.</p>
+            <div class="icons-modal">
+              <div class="gitHub-logo-modal">
+                <a href="https://github.com/henry-stroud/wdi-project-4" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+                </a>
+              </div>
+              <div class="link-logo-modal">
+                <a href="https://you-bet.herokuapp.com/" target="_blank">
+                <i class="fas fa-link fa-2x"></i>
+                </a>
+              </div>
+              </div>
+            </div>
+          </div>
+        <div class="overlay-top" id="playerConnect-overlay">
+          <div class="modal-inside">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h2>Player Connect</h2>
+              <small>React | Express | MongoDB</small>
+            </div>
+            <br>
+            <p>A social network for gamers, allowing users to search any game in the world and comment / review each game. Users create their own profiles and can interact with other users on the site via the chatbox. The site also serves up to date news and videos to the user.</p>
+            <div class="icons-modal">
+              <div class="gitHub-logo-modal">
+                <a href="https://github.com/henry-stroud/wdi-group-project" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+                </a>
+              </div>
+              <div class="link-logo-modal">
+                <a href="http://player-connect.herokuapp.com/" target="_blank">
+                <i class="fas fa-link fa-2x"></i>
+                </a>
+              </div>
+              </div>
+            </div>
+          </div>
+        <div class="overlay-top" id="artistify-overlay">
+          <div class="modal-inside">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h2>Artistify</h2>
+              <small>React | External API</small>
+            </div>
+            <br>
+            <p>A search tool that allows users to search any artist in the world, with the site then displaying that artist's top ten tracks on Spotify, their nationality on a map, a short biography and whether they are on tour or not at the moment.</p>
+            <div class="icons-modal">
+              <div class="gitHub-logo-modal">
+                <a href="https://github.com/henry-stroud/wdi-project-2" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+                </a>
+              </div>
+              <div class="link-logo-modal">
+                <a href="https://artistifyapii.herokuapp.com/" target="_blank">
+                <i class="fas fa-link fa-2x"></i>
+                </a>
+              </div>
+              </div>
+            </div>
+          </div>
+        <div class="overlay-top" id="battleships-overlay">
+          <div class="modal-inside">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h2>Battleships</h2>
+              <small>JavaScript | HTML | CSS</small>
+            </div>
+            <br>
+            <p>A vanilla JavaScript version of the classic game Battleships. Users must place their ships (not adjacently) and then fire on the enemy grid. The computer will then take turns with the user, with the aim of the game being to sink all the opponents ships.</p>
+            <div class="icons-modal">
+              <div class="gitHub-logo-modal">
+                <a href="https://github.com/henry-stroud/wdi-project-1" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+                </a>
+              </div>
+              <div class="link-logo-modal">
+                <a href="https://www.henrystroud.com/wdi-project-1/" target="_blank">
+                <i class="fas fa-link fa-2x"></i>
+                </a>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="glider-contain multiple" data-aos="fadeIn" data-aos-delay="1000">
@@ -328,24 +408,16 @@
           </button>
           <div class="glider">
             <figure id="youbet-image">
-              <!-- <a href="https://you-bet.herokuapp.com/" target="_blank"> -->
                 <img src="img/youbet1.png" alt="youbet1">
-              <!-- </a> -->
             </figure>
-            <figure>
-              <!-- <a href="http://player-connect.herokuapp.com/" target="_blank"> -->
+            <figure id="playerConnect-image">
                 <img src="img/player-connect.png" alt="player-connect">
-              <!-- </a> -->
             </figure>
-            <figure>
-              <!-- <a href="https://artistifyapii.herokuapp.com/" target="_blank"> -->
+            <figure id="artistify-image">
                 <img src="img/artistify.png" alt="artistify">
-              <!-- </a> -->
             </figure>
-            <figure>
-              <!-- <a href="https://www.henrystroud.com/wdi-project-1/" target="_blank"> -->
+            <figure id="battleships-image">
                 <img src="img/battleships.png" alt="battleships">
-              <!-- </a> -->
             </figure>
           </div>
           <button class="glider-next">
@@ -353,7 +425,6 @@
           </button>
           <div id="dots" class="glider-dots"></div>
         </div>
-
       </section>
       <section class="experience" id="experience-section">
         <div id="experience-title" data-aos="fade-right">
@@ -476,24 +547,18 @@
           </div>
           <div class="contact-details">
             <div class="contact-link">
-                <a href="mailto:henry.james.stroud@gmail.com">henry.james.stroud@gmail.com</a>
+                <a href="mailto:henry.james.stroud@gmail.com" target="_blank">henry.james.stroud@gmail.com</a>
             </div>
             <div class="contact-link">
-              <a href="https://github.com/henry-stroud">github.com/henry-stroud</a>
+              <a href="https://www.linkedin.com/in/henry-stroud/" target="_blank">linkedin.com/in/henry-stroud</a>
             </div>
             <div class="contact-link">
-              <a href="https://www.linkedin.com/in/henry-stroud/">linkedin.com/in/henry-stroud</a>
+              <a href="https://github.com/henry-stroud" target="_blank">github.com/henry-stroud</a>
             </div>
           </div>
         </div>
       </section>
     </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 3000,
-        once: true,
-      })
-    </script>
   </body>
 </html>

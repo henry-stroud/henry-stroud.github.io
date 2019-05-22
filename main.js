@@ -1,5 +1,10 @@
-/* global Waypoint, d3, Glider */
+/* global Waypoint, d3, Glider, AOS */
 window.addEventListener('DOMContentLoaded', () => {
+
+  AOS.init({
+    duration: 3000,
+    once: true
+  })
 
   consoleText(['Henry Stroud', 'Web Developer'], 'text',['tomato'])
 
@@ -526,24 +531,86 @@ window.addEventListener('DOMContentLoaded', () => {
   new ClassWatcher(artistifyButton, 'active', workOnClassAdd, workOnClassRemoval)
   new ClassWatcher(battleshipButton, 'active', workOnClassAdd, workOnClassRemoval)
 
-  const overlay = document.getElementById('simple-overlay')
+  const youBetOverlay = document.getElementById('youBet-overlay')
+  const closeBtnYouBet = document.getElementsByClassName('closeBtn')[0]
 
-  const closeBtn = document.getElementsByClassName('closeBtn')[0]
+  const playerConnectOverlay = document.getElementById('playerConnect-overlay')
+  const closeBtnPlayerConnect = document.getElementsByClassName('closeBtn')[1]
+
+  const artistifyOverlay = document.getElementById('artistify-overlay')
+  const closeBtnArtistify = document.getElementsByClassName('closeBtn')[2]
+
+  const battleshipsOverlay = document.getElementById('battleships-overlay')
+  const closeBtnBattleships = document.getElementsByClassName('closeBtn')[3]
 
   const youBet = document.querySelector('#youbet-image')
+  const playerConnect = document.querySelector('#playerConnect-image')
+  const artistify = document.querySelector('#artistify-image')
+  const battleships = document.querySelector('#battleships-image')
+
+
+  // youBet Modal
 
   window.addEventListener('click', (e) => {
-    if(e.target === overlay) {
-      overlay.style.display = 'none'
+    if(e.target === youBetOverlay) {
+      youBetOverlay.style.display = 'none'
     }
   })
 
   youBet.addEventListener('click', () => {
-    overlay.style.display = 'block'
+    youBetOverlay.style.display = 'block'
   })
 
-  closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none'
+  closeBtnYouBet.addEventListener('click', () => {
+    youBetOverlay.style.display = 'none'
+  })
+
+  // playerConnect Modal
+
+  window.addEventListener('click', (e) => {
+    if(e.target === playerConnectOverlay) {
+      playerConnectOverlay.style.display = 'none'
+    }
+  })
+
+  playerConnect.addEventListener('click', () => {
+    playerConnectOverlay.style.display = 'block'
+  })
+
+  closeBtnPlayerConnect.addEventListener('click', () => {
+    playerConnectOverlay.style.display = 'none'
+  })
+
+  // Artistify Modal
+
+  window.addEventListener('click', (e) => {
+    if(e.target === artistifyOverlay) {
+      artistifyOverlay.style.display = 'none'
+    }
+  })
+
+  artistify.addEventListener('click', () => {
+    artistifyOverlay.style.display = 'block'
+  })
+
+  closeBtnArtistify.addEventListener('click', () => {
+    artistifyOverlay.style.display = 'none'
+  })
+
+  // battleships Modal
+
+  window.addEventListener('click', (e) => {
+    if(e.target === battleshipsOverlay) {
+      battleshipsOverlay.style.display = 'none'
+    }
+  })
+
+  battleships.addEventListener('click', () => {
+    battleshipsOverlay.style.display = 'block'
+  })
+
+  closeBtnBattleships.addEventListener('click', () => {
+    battleshipsOverlay.style.display = 'none'
   })
 
 
