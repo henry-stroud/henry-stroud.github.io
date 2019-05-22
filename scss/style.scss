@@ -23,6 +23,9 @@ body {
         justify-content: space-around;
         padding: 20px;
         background-color: #031e43;
+        #burger-menu {
+          display: none;
+        }
         a {
           text-decoration: none;
           color: white;
@@ -647,5 +650,13 @@ label {
   }
   to {
     opacity: 1
+  }
+}
+
+
+
+@media only screen and (max-width: 650px) {
+  #burger-menu {
+    display: block
   }
 }

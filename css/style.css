@@ -25,6 +25,9 @@ body header div.navbar nav {
   padding: 20px;
   background-color: #031e43;
 }
+body header div.navbar nav #burger-menu {
+  display: none;
+}
 body header div.navbar nav a {
   text-decoration: none;
   color: white;
@@ -609,6 +612,11 @@ label {
   }
   to {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #burger-menu {
+    display: block;
   }
 }
 
