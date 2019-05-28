@@ -76,6 +76,7 @@ body main section {
   height: 100vh;
 }
 body main section .title-container {
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
