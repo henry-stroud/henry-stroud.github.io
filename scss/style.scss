@@ -74,6 +74,9 @@ body {
         @media only screen and (max-width: 650px) {
           font-size: 230%;
         }
+        @media only screen and (max-width: 325px) {
+          font-size: 200%;
+        }
         .scroll-down {
           font-size: 25%;
         }
@@ -96,6 +99,9 @@ body {
         justify-content: flex-start;
         font-size: 300%;
         font-weight: 200;
+        @media only screen and (max-width: 320px) {
+          font-size: 250%;
+        }
         h2 {
           font-weight: 200;
         }
@@ -110,6 +116,9 @@ body {
       @media only screen and (max-width: 450px) {
         height: 100vh;
       }
+      @media only screen and (max-width: 320px) {
+        height: 150vh;
+      }
       div#projects-title {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -118,6 +127,9 @@ body {
         justify-content: center;
         font-size: 300%;
         font-weight: 200;
+        @media only screen and (max-width: 320px) {
+          font-size: 250%;
+        }
         h2 {
           font-weight: 200;
         }
@@ -143,6 +155,9 @@ body {
       }
       @media only screen and (max-width: 679px) {
         height: 220vh;
+      }
+      @media only screen and (max-width: 320px) {
+        height: 250vh;
       }
       div#experience-title {
         padding-top: 50px;
@@ -198,7 +213,7 @@ body {
         height: 120vh;
       }
       @media only screen and (max-width: 400px) {
-        height: 130vh;
+        height: 150vh;
       }
       @media only screen and (max-width: 323px) {
         height: 200vh;
@@ -229,8 +244,10 @@ body {
         div.about-details {
           padding: 20px;
           width: 80%;
+          padding-left: 30px;
           @media only screen and (max-width: 719px) {
             width: 100%;
+            padding-left: 0;
           }
         }
       }
@@ -470,7 +487,12 @@ body {
 
 #battleship {
   min-width: 100px;
-  max-width: 200px;
+  @media only screen and (max-width: 650px) {
+    max-width: 300px;
+  }
+  @media only screen and (max-width: 400px) {
+    max-width: 200px;
+  }
   path {
     fill-opacity: 0;
     stroke: white;
@@ -560,7 +582,12 @@ figure {
 
 #youbet-logo {
   min-width: 100px;
-  max-width: 200px;
+  @media only screen and (max-width: 650px) {
+    max-width: 300px;
+  }
+  @media only screen and (max-width: 400px) {
+    max-width: 200px;
+  }
 }
 
 .glider-contain {
@@ -604,6 +631,9 @@ svg.bubble {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  @media only screen and (max-width: 320px) {
+    height: 500px;
+  }
 }
 
 svg {

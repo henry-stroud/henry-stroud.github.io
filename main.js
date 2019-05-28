@@ -598,10 +598,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const navSize = document.getElementById('myTopnav')
     const title = document.getElementById('title-page')
     title.style.paddingTop = '200px'
-    navSize.style.height = '200px'
+    navSize.style.height = '250px'
     navSize.style.marginBottom = '400px'
     navSize.style.borderBottom = '1px solid white'
     navSize.style.flexDirection = 'column-reverse'
+    navItems[4].style.marginTop = '10px'
+    console.log(navItems[4], 'hello')
     console.log(navItems)
     for (let i = 0; i < navItems.length; i++) {
       navItems[i].style.display = 'block'
