@@ -112,7 +112,7 @@ body main section.projects {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 130vh;
+  height: 150vh;
 }
 body main section.projects div#projects-title {
   padding-top: 50px;
@@ -137,7 +137,7 @@ body main section.experience {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 120vh;
+  height: 100vh;
 }
 @media only screen and (max-width: 979px) {
   body main section.experience {
@@ -228,9 +228,9 @@ body main section.about div.image-text-container {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  width: 80%;
+  width: 50%;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1050px) {
   body main section.about div.image-text-container {
     width: 100%;
     flex-direction: column;
@@ -624,7 +624,7 @@ label {
   margin: 10% auto;
   padding: 20px;
   width: 50%;
-  height: 50%;
+  height: 42%;
   overflow: auto;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
@@ -633,6 +633,16 @@ label {
 @media only screen and (max-width: 750px) {
   .modal-inside {
     width: 80%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .modal-inside {
+    height: 50%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .modal-inside {
+    height: 60%;
   }
 }
 

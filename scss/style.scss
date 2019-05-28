@@ -102,7 +102,7 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      height: 130vh;
+      height: 150vh;
       div#projects-title {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -127,7 +127,7 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      height: 120vh;
+      height: 100vh;
       @media only screen and (max-width: 979px) {
         height: 170vh;
       }
@@ -207,8 +207,8 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        width: 80%;
-        @media only screen and (max-width: 719px) {
+        width: 50%;
+        @media only screen and (max-width: 1050px) {
           width: 100%;
           flex-direction: column;
           padding-top: 40px;
@@ -633,10 +633,16 @@ label {
   margin: 10% auto;
   padding: 20px;
   width: 50%;
-  height: 50%;
+  height: 42%;
   overflow: auto;
   @media only screen and (max-width: 750px) {
     width: 80%;
+  }
+  @media only screen and (max-width: 560px) {
+    height: 50%;
+  }
+  @media only screen and (max-width: 430px) {
+    height: 60%;
   }
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
