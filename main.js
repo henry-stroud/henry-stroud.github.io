@@ -1,10 +1,14 @@
 /* global Waypoint, d3, Glider, AOS */
 window.addEventListener('DOMContentLoaded', () => {
 
+  // iniatiating Animate on Scroll
+
   AOS.init({
     duration: 3000,
     once: true
   })
+
+  // title typing effect
 
   consoleText(['Henry Stroud', 'Web Developer'], 'text',['tomato'])
 
@@ -60,37 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 330)
   }
 
-  new Waypoint({
-    element: document.querySelector('#skill-title'),
-    handler: function() {
-      // anime({
-      //   targets: '#skill-title',
-      //   translateX: 250,
-      //   duration: 3000
-      // })
-    },
-    offset: '100%'
-  })
-
-  //   var ctx = document.getElementById('myChart').getContext('2d');
-  // var chart = new Chart(ctx, {
-  //     // The type of chart we want to create
-  //     type: 'bar',
-  //
-  //     // The data for our dataset
-  //     data: {
-  //         labels: ['JavaScript', 'February', 'March', 'April', 'May', 'June', 'July'],
-  //         datasets: [{
-  //             label: 'My First dataset',
-  //             backgroundColor: 'rgb(255, 99, 132)',
-  //             borderColor: 'rgb(255, 99, 132)',
-  //             data: [0, 10, 5, 2, 20, 30, 45]
-  //         }]
-  //     },
-  //
-  //     // Configuration options go here
-  //     options: {}
-  // });
+  // bubble graph for skills
 
   new Waypoint({
     element: document.querySelector('.bubble'),
@@ -168,7 +142,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }]
 
       const svg = d3.select('.bubble')
-      const width = document.body.clientWidth
+      const width = window.innerWidth
       const height = +svg.attr('height')
       const centerX = width * 0.25
       const centerY = height * 0.25
