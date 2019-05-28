@@ -142,7 +142,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }]
 
       const svg = d3.select('.bubble')
-      const width = window.innerWidth
+      const width = document.body.clientWidth
       const height = +svg.attr('height')
       const centerX = width * 0.25
       const centerY = height * 0.25

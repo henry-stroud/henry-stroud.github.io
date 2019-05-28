@@ -47,7 +47,7 @@ body header div.navbar nav i {
   display: none;
   cursor: pointer;
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 800px) {
   body header div.navbar nav i {
     display: block;
   }
@@ -83,6 +83,11 @@ body main section .title-container {
   align-items: center;
   font-size: 500%;
 }
+@media only screen and (max-width: 650px) {
+  body main section .title-container {
+    font-size: 230%;
+  }
+}
 body main section .title-container .scroll-down {
   font-size: 25%;
 }
@@ -115,6 +120,11 @@ body main section.projects {
   align-items: center;
   height: 150vh;
 }
+@media only screen and (max-width: 450px) {
+  body main section.projects {
+    height: 100vh;
+  }
+}
 body main section.projects div#projects-title {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -140,6 +150,11 @@ body main section.experience {
   align-items: center;
   height: 100vh;
 }
+@media only screen and (max-width: 450px) {
+  body main section.experience {
+    height: 150vh;
+  }
+}
 @media only screen and (max-width: 979px) {
   body main section.experience {
     height: 170vh;
@@ -157,9 +172,12 @@ body main section.experience div#experience-title {
   justify-content: center;
   font-size: 300%;
   font-weight: 200;
+  max-width: 370px;
 }
 body main section.experience div#experience-title h2 {
   font-weight: 200;
+  max-width: 250px;
+  font-size: 100%;
 }
 body main section.experience div.experience-container-large {
   display: flex;
@@ -204,7 +222,7 @@ body main section.about {
 }
 @media only screen and (max-width: 400px) {
   body main section.about {
-    height: 150vh;
+    height: 130vh;
   }
 }
 @media only screen and (max-width: 323px) {
@@ -277,6 +295,11 @@ body main section.contact div.image-text-container .icons {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+}
+@media only screen and (max-width: 450px) {
+  body main section.contact div.image-text-container .icons {
+    padding-left: 0;
+  }
 }
 body main section.contact div.image-text-container .icons .fab {
   padding: 11px;
@@ -441,6 +464,10 @@ body main section.contact div.image-text-container .contact-details .contact-lin
   stroke-dasharray: 27640.380859375;
 }
 
+#battleship {
+  min-width: 100px;
+  max-width: 200px;
+}
 #battleship path {
   fill-opacity: 0;
   stroke: white;
@@ -530,6 +557,7 @@ figure img {
 
 #youbet-logo {
   min-width: 100px;
+  max-width: 200px;
 }
 
 .glider-contain {
@@ -542,7 +570,7 @@ figure img {
 }
 @media only screen and (max-width: 800px) {
   .glider-contain {
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -643,7 +671,7 @@ label {
 }
 @media only screen and (max-width: 430px) {
   .modal-inside {
-    height: 60%;
+    height: 50%;
   }
 }
 
