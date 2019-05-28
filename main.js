@@ -619,8 +619,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
   burger.addEventListener('click', () => {
     console.log('hello')
+    burger.style.marginTop = '10px'
+    const navItems = document.getElementsByClassName('navbar-item')
+    const navSize = document.getElementById('myTopnav')
+    const title = document.getElementById('title-page')
+    title.style.paddingTop = '200px'
+    navSize.style.height = '200px'
+    navSize.style.marginBottom = '400px'
+    navSize.style.borderBottom = '1px solid white'
+    navSize.style.flexDirection = 'column-reverse'
+    console.log(navItems)
+    for (let i = 0; i < navItems.length; i++) {
+      navItems[i].style.display = 'block'
+      navItems[i].style.padding = '8px'
+    }
   })
-
 
   // allDots[0].childNodes.forEach((x) => {
   //   x.addEventListener('click', (e) => {

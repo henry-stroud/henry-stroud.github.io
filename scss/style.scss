@@ -8,6 +8,14 @@ html {
   scroll-behavior: smooth;
 }
 
+#burger-menu {
+  display: none;
+  cursor: pointer;
+  @media only screen and (max-width: 650px) {
+    display: block;
+  }
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #031e43;
@@ -24,9 +32,12 @@ body {
         padding: 20px;
         background-color: #031e43;
         @media only screen and (max-width: 650px) {
-            justify-content: flex-start;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 20px;
         }
-        #burger-menu {
+        i {
           display: none;
           cursor: pointer;
           @media only screen and (max-width: 650px) {
@@ -38,6 +49,10 @@ body {
           color: white;
           @media only screen and (max-width: 650px) {
               display: none;
+          }
+          @media only screen and (min-width: 650px) {
+              display: block;
+              padding: 0px;
           }
         }
       }
@@ -113,6 +128,12 @@ body {
       justify-content: flex-start;
       align-items: center;
       height: 120vh;
+      @media only screen and (max-width: 979px) {
+        height: 170vh;
+      }
+      @media only screen and (max-width: 679px) {
+        height: 220vh;
+      }
       div#experience-title {
         padding-top: 50px;
         display: flex;
@@ -160,6 +181,15 @@ body {
       justify-content: flex-start;
       align-items: center;
       height: 100vh;
+      @media only screen and (max-width: 719px) {
+        height: 120vh;
+      }
+      @media only screen and (max-width: 400px) {
+        height: 150vh;
+      }
+      @media only screen and (max-width: 323px) {
+        height: 200vh;
+      }
       div#about-title {
         padding-top: 50px;
         display: flex;
@@ -177,9 +207,18 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        width: 50%;
+        width: 80%;
+        @media only screen and (max-width: 719px) {
+          width: 100%;
+          flex-direction: column;
+          padding-top: 40px;
+        }
         div.about-details {
-          padding-left: 30px;
+          padding: 20px;
+          width: 80%;
+          @media only screen and (max-width: 719px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -506,7 +545,13 @@ figure {
 }
 
 .glider-contain {
-  width: 60%;
+  width: 80%;
+  @media only screen and (max-width: 1100px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
 }
 
 .glider {
@@ -587,9 +632,12 @@ label {
   color: black;
   margin: 10% auto;
   padding: 20px;
-  width: 30%;
+  width: 50%;
   height: 50%;
-  overflow: hidden;
+  overflow: auto;
+  @media only screen and (max-width: 750px) {
+    width: 80%;
+  }
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 2s;
@@ -647,6 +695,15 @@ label {
     }
   }
 }
+
+.display-nav {
+  display: block;
+}
+
+.undisplay-nav {
+  display: none;
+}
+
 
 @keyframes draw {
   to {

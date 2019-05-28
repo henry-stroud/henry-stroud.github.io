@@ -8,6 +8,16 @@ html {
   scroll-behavior: smooth;
 }
 
+#burger-menu {
+  display: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 650px) {
+  #burger-menu {
+    display: block;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #031e43;
@@ -27,15 +37,18 @@ body header div.navbar nav {
 }
 @media only screen and (max-width: 650px) {
   body header div.navbar nav {
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
   }
 }
-body header div.navbar nav #burger-menu {
+body header div.navbar nav i {
   display: none;
   cursor: pointer;
 }
 @media only screen and (max-width: 650px) {
-  body header div.navbar nav #burger-menu {
+  body header div.navbar nav i {
     display: block;
   }
 }
@@ -46,6 +59,12 @@ body header div.navbar nav a {
 @media only screen and (max-width: 650px) {
   body header div.navbar nav a {
     display: none;
+  }
+}
+@media only screen and (min-width: 650px) {
+  body header div.navbar nav a {
+    display: block;
+    padding: 0px;
   }
 }
 body main {
@@ -120,6 +139,16 @@ body main section.experience {
   align-items: center;
   height: 120vh;
 }
+@media only screen and (max-width: 979px) {
+  body main section.experience {
+    height: 170vh;
+  }
+}
+@media only screen and (max-width: 679px) {
+  body main section.experience {
+    height: 220vh;
+  }
+}
 body main section.experience div#experience-title {
   padding-top: 50px;
   display: flex;
@@ -167,6 +196,21 @@ body main section.about {
   align-items: center;
   height: 100vh;
 }
+@media only screen and (max-width: 719px) {
+  body main section.about {
+    height: 120vh;
+  }
+}
+@media only screen and (max-width: 400px) {
+  body main section.about {
+    height: 150vh;
+  }
+}
+@media only screen and (max-width: 323px) {
+  body main section.about {
+    height: 200vh;
+  }
+}
 body main section.about div#about-title {
   padding-top: 50px;
   display: flex;
@@ -184,10 +228,23 @@ body main section.about div.image-text-container {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  width: 50%;
+  width: 80%;
+}
+@media only screen and (max-width: 719px) {
+  body main section.about div.image-text-container {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 40px;
+  }
 }
 body main section.about div.image-text-container div.about-details {
-  padding-left: 30px;
+  padding: 20px;
+  width: 80%;
+}
+@media only screen and (max-width: 719px) {
+  body main section.about div.image-text-container div.about-details {
+    width: 100%;
+  }
 }
 body main section.contact {
   display: flex;
@@ -475,7 +532,17 @@ figure img {
 }
 
 .glider-contain {
-  width: 60%;
+  width: 80%;
+}
+@media only screen and (max-width: 1100px) {
+  .glider-contain {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .glider-contain {
+    width: 100%;
+  }
 }
 
 .glider {
@@ -556,12 +623,17 @@ label {
   color: black;
   margin: 10% auto;
   padding: 20px;
-  width: 30%;
+  width: 50%;
   height: 50%;
-  overflow: hidden;
+  overflow: auto;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 2s;
+}
+@media only screen and (max-width: 750px) {
+  .modal-inside {
+    width: 80%;
+  }
 }
 
 .closeBtn {
@@ -615,6 +687,14 @@ label {
 }
 .icons-modal .link-logo-modal i:hover, .icons-modal .link-logo-modal i:focus {
   color: #808080;
+}
+
+.display-nav {
+  display: block;
+}
+
+.undisplay-nav {
+  display: none;
 }
 
 @keyframes draw {
