@@ -144,8 +144,34 @@ window.addEventListener('DOMContentLoaded', () => {
       const svg = d3.select('.bubble')
       const width = document.body.clientWidth
       const height = +svg.attr('height')
-      const centerX = width * 0.25
-      const centerY = height * 0.25
+      let centerX
+      let centerY
+      console.log(width, 'current width')
+      if (width > 1058) {
+        centerX = width * 0.25
+        centerY = height * 0.25
+      } else if (width <= 1039 && width > 961) {
+        centerX = width * 0.30
+        centerY = height * 0.25
+      } else if (width <= 961 && width > 867) {
+        centerX = width * 0.35
+        centerY = height * 0.25
+      } else if (width <= 867 && width > 790) {
+        centerX = width * 0.45
+        centerY = height * 0.25
+      } else if (width <= 790 && width > 650) {
+        centerX = width * 0.46
+        centerY = height * 0.25
+      } else if (width <= 650 && width > 500) {
+        centerX = width * 0.53
+        centerY = height * 0.05
+      } else if (width <= 510 && width > 340) {
+        centerX = width * 0.7
+        centerY = height * 0.05
+      } else if (width <= 340) {
+        centerX = width * 0.8
+        centerY = height * 0.01
+      }
       const strength = 0.05
 
       const format = d3.format(',d')
@@ -591,8 +617,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const burger = document.getElementById('burger-menu')
 
+  const skillz = document.getElementById('skill-title')
+
+  skillz.addEventListener('click', () => {
+    console.log(document.body.clientWidth,'clientWidth')
+  })
+
   burger.addEventListener('click', () => {
     console.log('hello')
+    console.log(document.body.clientWidth,'clientWidth')
     burger.style.marginTop = '10px'
     const navItems = document.getElementsByClassName('navbar-item')
     const navSize = document.getElementById('myTopnav')

@@ -169,8 +169,11 @@ body {
         max-width: 370px;
         h2 {
           font-weight: 200;
-          max-width: 250px;
-          font-size: 100%;
+          font-size: 130%;
+          max-width: 370px;
+          @media only screen and (max-width: 679px) {
+            font-size: 100%;
+          }
         }
       }
       div.experience-container-large {

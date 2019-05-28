@@ -201,8 +201,13 @@ body main section.experience div#experience-title {
 }
 body main section.experience div#experience-title h2 {
   font-weight: 200;
-  max-width: 250px;
-  font-size: 100%;
+  font-size: 130%;
+  max-width: 370px;
+}
+@media only screen and (max-width: 679px) {
+  body main section.experience div#experience-title h2 {
+    font-size: 100%;
+  }
 }
 body main section.experience div.experience-container-large {
   display: flex;
