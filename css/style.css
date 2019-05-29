@@ -849,6 +849,12 @@ label {
   padding-bottom: 5px;
 }
 
+@media only screen and (max-width: 500px) {
+  #profile-photo {
+    padding-top: 40px;
+  }
+}
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;

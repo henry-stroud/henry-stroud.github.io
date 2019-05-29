@@ -146,7 +146,6 @@ window.addEventListener('DOMContentLoaded', () => {
       const height = +svg.attr('height')
       let centerX
       let centerY
-      console.log(width, 'current width')
       if (width > 1058) {
         centerX = width * 0.25
         centerY = height * 0.25
@@ -201,7 +200,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
       const nodes = pack(root).leaves().map(node => {
-        console.log('node:', node.x, (node.x - centerX) * 2)
         const data = node.data
         return {
           x: centerX + (node.x - centerX) * 3, // magnify start position to have transition to center movement
@@ -353,11 +351,6 @@ window.addEventListener('DOMContentLoaded', () => {
           }
         })
       })
-      console.log($languageLogo)
-      $languageLogo.on('mouseover', (e) => {
-        console.log('hello')
-        console.log(e.target.attributes['clip-path'].value)
-      })
       this.destroy()
     },
     offset: '50%'
@@ -371,38 +364,6 @@ window.addEventListener('DOMContentLoaded', () => {
     offset: '30%'
   })
 
-
-
-  const path = document.querySelector('#player-connect path')
-  const totalLength = path.getTotalLength()
-
-  const path2 = document.querySelector('#youbet-logo path')
-  const totalLength2 = path2.getTotalLength()
-
-  const path3 = document.querySelector('#logo-a path')
-  const totalLength3 = path3.getTotalLength()
-
-  const path4 = document.querySelector('#battleship path')
-  const totalLength4 = path4.getTotalLength()
-
-  console.log(totalLength4, 'battleship')
-
-  console.log(totalLength3, 'logo a')
-
-  console.log(totalLength2, 'youbet path ')
-
-  console.log(totalLength, 'player connect path')
-
-  // new Waypoint({
-  //   element: document.querySelector('.logos'),
-  //   handler: function() {
-  //     $('.logos').css({
-  //       display: 'none'
-  //     })
-  //   },
-  //   offset: '-20%'
-  // })
-
   new Glider(document.querySelector('.glider'), {
     slidesToShow: '1',
     dots: '#dots',
@@ -413,25 +374,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-
-  // const dots = document.querySelectorAll('#dots')
-  // console.log(dots, 'THESE')
-
-  // if (dots.classList.includes('active')) {
-  //   console.log(dots, 'activo')
-  // }
-
-  const allDots = document.querySelectorAll('#dots')
-
-  console.log(allDots[0].childNodes, 'dots')
-
   const dotz = document.querySelectorAll('#dots')
 
   const youBetButton = dotz[0].childNodes[0]
   const playerConnectButton = dotz[0].childNodes[1]
   const artistifyButton = dotz[0].childNodes[2]
   const battleshipButton = dotz[0].childNodes[3]
-  // console.log(dotz[0].childNodes[0], 'dotz')
 
 
   const $battleshipLogo = $('.battleship-logo')
@@ -440,7 +388,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const $aLogo = $('.a-logo')
 
   function workOnClassAdd(name) {
-    console.log('I\'m triggered when the class is added, index number' + name.targetNode.dataset.index)
     if (name.targetNode.dataset.index === '0') {
       $youBetLogo.addClass('display')
       $youBetLogo.removeClass('removed')
@@ -460,7 +407,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function workOnClassRemoval(name) {
-    console.log('I\'m triggered when the class is removed, index number' + name.targetNode.dataset.index)
     if (name.targetNode.dataset.index === '0') {
       $youBetLogo.addClass('removed')
       $youBetLogo.removeClass('display')
@@ -513,10 +459,8 @@ window.addEventListener('DOMContentLoaded', () => {
           if(this.lastClassState !== currentClassState) {
             this.lastClassState = currentClassState
             if(currentClassState) {
-              console.log(this)
               this.classAddedCallback(this)
             } else {
-              console.log(this)
               this.classRemovedCallback(this)
             }
           }
@@ -615,14 +559,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // burger menu
 
-
-  const skillz = document.getElementById('skill-title')
-
-
-  skillz.addEventListener('click', () => {
-    console.log(document.body.clientWidth,'clientWidth')
-  })
-
   const burger = document.getElementById('burger')
   const menuItems = document.getElementById('menuBurger')
 
@@ -635,6 +571,5 @@ window.addEventListener('DOMContentLoaded', () => {
       menuItems.classList.add('active-menu')
     }
   })
-
 
 })
