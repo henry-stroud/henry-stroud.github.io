@@ -16,8 +16,6 @@ html {
   }
 }
 
-
-
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #031e43;
@@ -836,11 +834,10 @@ label {
 }
 
 .active-menu {
-  display: flex;
+
 }
 
 .inactive-menu {
-  display: none;
 }
 
 @keyframes draw {

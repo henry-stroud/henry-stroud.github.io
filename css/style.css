@@ -848,14 +848,6 @@ label {
   padding-bottom: 5px;
 }
 
-.active-menu {
-  display: flex;
-}
-
-.inactive-menu {
-  display: none;
-}
-
 @keyframes draw {
   to {
     stroke-dashoffset: 0;

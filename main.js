@@ -618,12 +618,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const skillz = document.getElementById('skill-title')
 
-  const navSize = document.getElementById('myTopnav')
-
-  const navItems = document.getElementsByClassName('navbar-item')
-
-  const title = document.getElementById('title-page')
-
 
   skillz.addEventListener('click', () => {
     console.log(document.body.clientWidth,'clientWidth')
@@ -633,92 +627,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const menuItems = document.getElementById('menuBurger')
 
   burger.addEventListener('click', () => {
-    menuItems.classList.add('active-menu')
+    if (menuItems.classList.contains('active-menu')) {
+      menuItems.style.display = 'none'
+      menuItems.classList.remove('active-menu')
+    } else {
+      menuItems.style.display = 'flex'
+      menuItems.classList.add('active-menu')
+    }
   })
 
-  // burger.addEventListener('click', () => {
-  //   if (burger.classList.contains('open-burger')) {
-  //     burger.classList.remove('open-burger')
-  //     burger.classList.add('close-burger')
-  //     navSize.style.height = '65px'
-  //     navSize.style.marginBottom = '0px'
-  //     navSize.style.borderBottom = '0px'
-  //     navSize.style.flexDirection = 'row'
-  //     title.style.paddingTop = '0px'
-  //     navItems[4].style.marginTop = '0px'
-  //     for (let i = 0; i < navItems.length; i++) {
-  //       navItems[i].style.display = 'none'
-  //       navItems[i].style.padding = '0px'
-  //     }
-  //   } else {
-  //     burger.classList.remove('close-burger')
-  //     burger.classList.add('open-burger')
-  //     navSize.style.height = '250px'
-  //     navSize.style.marginBottom = '400px'
-  //     navSize.style.borderBottom = '1px solid white'
-  //     navSize.style.flexDirection = 'column-reverse'
-  //     title.style.paddingTop = '200px'
-  //     navItems[4].style.marginTop = '10px'
-  //     for (let i = 0; i < navItems.length; i++) {
-  //       navItems[i].style.display = 'block'
-  //       navItems[i].style.padding = '8px'
-  //     }
-  //   }
-  //   console.log(burger.classList.contains('open-burger'), 'classlist')
-  //   console.log(navItems[4], 'hello')
-  //   console.log(navItems)
-  // })
-
-
-  // allDots[0].childNodes.forEach((x) => {
-  //   x.addEventListener('click', (e) => {
-  //     console.log(e.target.getAttribute('data-index'))
-  //     if (e.target.getAttribute('data-index') === '0') {
-  //       console.log(e.target, 'this node is active')
-  //       $youBetLogo.removeClass('removed')
-  //       $youBetLogo.addClass('display')
-  //       $playerConnectLogo.removeClass('display')
-  //       $playerConnectLogo.addClass('removed')
-  //     }
-  //     if (e.target.getAttribute('data-index') === '1') {
-  //       console.log(e.target, 'this node is active')
-  //       $youBetLogo.addClass('removed')
-  //       $youBetLogo.removeClass('display')
-  //       $playerConnectLogo.addClass('display')
-  //       $playerConnectLogo.removeClass('removed')
-  //     }
-  //     if (e.target.getAttribute('data-index') === '2') {
-  //       console.log(e.target, 'this node is active')
-  //       $youBetLogo.addClass('removed')
-  //       $youBetLogo.removeClass('display')
-  //     }
-  //     if (e.target.getAttribute('data-index') === '3') {
-  //       console.log(e.target, 'this node is active')
-  //       $youBetLogo.addClass('removed')
-  //       $youBetLogo.removeClass('display')
-  //     }
-  //   })
-  // })
-
-
-
-  // $(function() {
-  //   $(window).scroll(function () {
-  //     if ($(this).scrollTop() > 500) {
-  //       $('*').addClass('changeColor')
-  //     }
-  //     if ($(this).scrollTop() < 500) {
-  //       $('*').removeClass('changeColor')
-  //     }
-  //   })
-  // })
-
-//   var svg = document.querySelector("#player-connect");
-//
-// svg.setAttribute("preserveAspectRatio", "xMinYMin meet");
-// svg.setAttribute("viewBox", [0, 0, svg.getAttribute("width"), svg.getAttribute("height")].join(" "));
-//
-// svg.removeAttribute("width");
-// svg.removeAttribute("height");
 
 })
