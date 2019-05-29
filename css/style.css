@@ -264,7 +264,7 @@ body main section.about {
     height: 120vh;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   body main section.about {
     height: 170vh;
   }
@@ -276,6 +276,7 @@ body main section.about {
 }
 body main section.about div#about-title {
   padding-top: 50px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -847,12 +848,6 @@ label {
 #navSizeOpening #myTopnavOpening i {
   cursor: pointer;
   padding-bottom: 5px;
-}
-
-@media only screen and (max-width: 500px) {
-  #profile-photo {
-    padding-top: 40px;
-  }
 }
 
 @keyframes draw {

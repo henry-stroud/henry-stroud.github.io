@@ -225,7 +225,7 @@ body {
       @media only screen and (max-width: 719px) {
         height: 120vh;
       }
-      @media only screen and (max-width: 400px) {
+      @media only screen and (max-width: 500px) {
         height: 170vh;
       }
       @media only screen and (max-width: 323px) {
@@ -233,6 +233,7 @@ body {
       }
       div#about-title {
         padding-top: 50px;
+        padding-bottom: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -841,11 +842,11 @@ label {
 .inactive-menu {
 }
 
-#profile-photo {
-  @media only screen and (max-width: 500px) {
-    padding-top: 40px;
-  }
-}
+// #profile-photo {
+//   @media only screen and (max-width: 500px) {
+//     padding-top: 40px;
+//   }
+// }
 
 @keyframes draw {
   to {
