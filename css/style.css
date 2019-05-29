@@ -35,6 +35,15 @@ body header div.navbar nav {
   padding: 20px;
   background-color: #031e43;
 }
+@media only screen and (min-width: 650px) {
+  body header div.navbar nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #031e43;
+  }
+}
 @media only screen and (max-width: 650px) {
   body header div.navbar nav {
     display: flex;
@@ -789,6 +798,17 @@ label {
 
 .undisplay-nav {
   display: none;
+}
+
+.open-burger {
+  margin-top: 8px;
+}
+
+.nav-open {
+  height: 250px;
+  margin-bottom: 400px;
+  border-bottom: 1px solid white;
+  flex-direction: column-reverse;
 }
 
 @keyframes draw {

@@ -26,6 +26,13 @@ body {
       width: 100%;
       z-index: 10;
       nav {
+        @media only screen and (min-width: 650px) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 20px;
+          background-color: #031e43;
+        }
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -768,6 +775,23 @@ label {
 //   }
 // }
 
+.open-burger {
+  margin-top: 8px;
+}
+
+.close-burger {
+}
+
+.nav-open {
+  height: 250px;
+  margin-bottom: 400px;
+  border-bottom: 1px solid white;
+  flex-direction: column-reverse;
+}
+
+.nav-close {
+
+}
 
 @keyframes draw {
   to {
