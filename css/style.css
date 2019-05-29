@@ -297,7 +297,7 @@ body main section.about div.image-text-container {
   body main section.about div.image-text-container {
     width: 100%;
     flex-direction: column;
-    padding-top: 40px;
+    padding-top: 80px;
   }
 }
 body main section.about div.image-text-container div.about-details {
