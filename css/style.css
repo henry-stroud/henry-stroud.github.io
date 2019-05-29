@@ -271,12 +271,12 @@ body main section.about {
 }
 @media only screen and (max-width: 323px) {
   body main section.about {
-    height: 220vh;
+    height: 200vh;
   }
 }
 body main section.about div#about-title {
   padding-top: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
