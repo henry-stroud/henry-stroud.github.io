@@ -434,8 +434,9 @@ body {
 
 
 #js {
-  max-width: 95%;
-  max-height: 95%;
+  @media only screen and (max-width: 450px) {
+    padding-right: 5px;
+  }
   path {
     fill-opacity: 0;
     stroke: white;

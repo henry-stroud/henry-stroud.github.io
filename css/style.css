@@ -465,9 +465,10 @@ body main section.contact div.image-text-container .contact-details .contact-lin
   stroke-dasharray: 2000;
 }
 
-#js {
-  max-width: 95%;
-  max-height: 95%;
+@media only screen and (max-width: 450px) {
+  #js {
+    padding-right: 5px;
+  }
 }
 #js path {
   fill-opacity: 0;
