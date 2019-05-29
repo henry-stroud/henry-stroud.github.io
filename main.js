@@ -572,4 +572,15 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
 
+  const mobileNavItem = document.getElementsByClassName('mobile-nav-item')
+
+  console.log(mobileNavItem, 'mobileNav')
+
+  for (let i = 0; i < mobileNavItem.length; i++) {
+    mobileNavItem[i].addEventListener('click', () => {
+      menuItems.style.display = 'none'
+      menuItems.classList.remove('active-menu')
+    })
+  }
+
 })
