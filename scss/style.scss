@@ -226,10 +226,10 @@ body {
         height: 120vh;
       }
       @media only screen and (max-width: 400px) {
-        height: 150vh;
+        height: 170vh;
       }
       @media only screen and (max-width: 323px) {
-        height: 200vh;
+        height: 220vh;
       }
       div#about-title {
         padding-top: 50px;
@@ -252,7 +252,7 @@ body {
         @media only screen and (max-width: 1050px) {
           width: 100%;
           flex-direction: column;
-          padding-top: 80px;
+          padding-top: 40px;
         }
         div.about-details {
           padding: 20px;
