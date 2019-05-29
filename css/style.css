@@ -28,6 +28,11 @@ body header div.navbar {
   width: 100%;
   z-index: 10;
 }
+@media only screen and (max-width: 650px) {
+  body header div.navbar {
+    display: none;
+  }
+}
 body header div.navbar nav {
   display: flex;
   flex-direction: row;
@@ -35,7 +40,7 @@ body header div.navbar nav {
   padding: 20px;
   background-color: #031e43;
 }
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 651px) {
   body header div.navbar nav {
     display: flex;
     flex-direction: row;
@@ -809,6 +814,46 @@ label {
   margin-bottom: 400px;
   border-bottom: 1px solid white;
   flex-direction: column-reverse;
+}
+
+#navSizeOpening {
+  position: fixed;
+  background-color: #031e43;
+  width: 100%;
+  z-index: 10;
+}
+#navSizeOpening #myTopnavOpening {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-bottom: 1px solid white;
+}
+@media only screen and (min-width: 650px) {
+  #navSizeOpening #myTopnavOpening {
+    display: none;
+  }
+}
+#navSizeOpening #myTopnavOpening .menu-items {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+#navSizeOpening #myTopnavOpening a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+}
+#navSizeOpening #myTopnavOpening i {
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.active-menu {
+  display: flex;
+}
+
+.inactive-menu {
+  display: none;
 }
 
 @keyframes draw {

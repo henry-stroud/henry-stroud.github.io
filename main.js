@@ -615,7 +615,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // burger menu
 
-  const burger = document.getElementById('burger-menu')
 
   const skillz = document.getElementById('skill-title')
 
@@ -630,38 +629,45 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log(document.body.clientWidth,'clientWidth')
   })
 
+  const burger = document.getElementById('burger')
+  const menuItems = document.getElementById('menuBurger')
+
   burger.addEventListener('click', () => {
-    if (burger.classList.contains('open-burger')) {
-      burger.classList.remove('open-burger')
-      burger.classList.add('close-burger')
-      navSize.style.height = '65px'
-      navSize.style.marginBottom = '0px'
-      navSize.style.borderBottom = '0px'
-      navSize.style.flexDirection = 'row'
-      title.style.paddingTop = '0px'
-      navItems[4].style.marginTop = '0px'
-      for (let i = 0; i < navItems.length; i++) {
-        navItems[i].style.display = 'none'
-        navItems[i].style.padding = '0px'
-      }
-    } else {
-      burger.classList.remove('close-burger')
-      burger.classList.add('open-burger')
-      navSize.style.height = '250px'
-      navSize.style.marginBottom = '400px'
-      navSize.style.borderBottom = '1px solid white'
-      navSize.style.flexDirection = 'column-reverse'
-      title.style.paddingTop = '200px'
-      navItems[4].style.marginTop = '10px'
-      for (let i = 0; i < navItems.length; i++) {
-        navItems[i].style.display = 'block'
-        navItems[i].style.padding = '8px'
-      }
-    }
-    console.log(burger.classList.contains('open-burger'), 'classlist')
-    console.log(navItems[4], 'hello')
-    console.log(navItems)
+    menuItems.classList.add('active-menu')
   })
+
+  // burger.addEventListener('click', () => {
+  //   if (burger.classList.contains('open-burger')) {
+  //     burger.classList.remove('open-burger')
+  //     burger.classList.add('close-burger')
+  //     navSize.style.height = '65px'
+  //     navSize.style.marginBottom = '0px'
+  //     navSize.style.borderBottom = '0px'
+  //     navSize.style.flexDirection = 'row'
+  //     title.style.paddingTop = '0px'
+  //     navItems[4].style.marginTop = '0px'
+  //     for (let i = 0; i < navItems.length; i++) {
+  //       navItems[i].style.display = 'none'
+  //       navItems[i].style.padding = '0px'
+  //     }
+  //   } else {
+  //     burger.classList.remove('close-burger')
+  //     burger.classList.add('open-burger')
+  //     navSize.style.height = '250px'
+  //     navSize.style.marginBottom = '400px'
+  //     navSize.style.borderBottom = '1px solid white'
+  //     navSize.style.flexDirection = 'column-reverse'
+  //     title.style.paddingTop = '200px'
+  //     navItems[4].style.marginTop = '10px'
+  //     for (let i = 0; i < navItems.length; i++) {
+  //       navItems[i].style.display = 'block'
+  //       navItems[i].style.padding = '8px'
+  //     }
+  //   }
+  //   console.log(burger.classList.contains('open-burger'), 'classlist')
+  //   console.log(navItems[4], 'hello')
+  //   console.log(navItems)
+  // })
 
 
   // allDots[0].childNodes.forEach((x) => {

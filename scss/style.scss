@@ -16,6 +16,8 @@ html {
   }
 }
 
+
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #031e43;
@@ -25,8 +27,11 @@ body {
       position: fixed;
       width: 100%;
       z-index: 10;
+      @media only screen and (max-width: 650px) {
+        display: none;
+      }
       nav {
-        @media only screen and (min-width: 650px) {
+        @media only screen and (min-width: 651px) {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
@@ -791,6 +796,51 @@ label {
 
 .nav-close {
 
+}
+
+// nav#myTopnav.topnav {
+//   @media only screen and (min-width: 650px) {
+//     flex-direction: row;
+//     color: red;
+//   }
+// }
+
+#navSizeOpening {
+  position: fixed;
+  background-color: #031e43;
+  width: 100%;
+  z-index: 10;
+  #myTopnavOpening {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-bottom: 1px solid white;
+    @media only screen and (min-width: 650px) {
+      display: none;
+    }
+    .menu-items {
+      display: flex;
+      flex-direction: column;
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 8px;
+    }
+    i {
+      cursor: pointer;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.active-menu {
+  display: flex;
+}
+
+.inactive-menu {
+  display: none;
 }
 
 @keyframes draw {
