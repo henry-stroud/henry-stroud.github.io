@@ -165,7 +165,7 @@ window.addEventListener('DOMContentLoaded', () => {
         centerX = width * 0.53
         centerY = height * 0.05
       } else if (width <= 510 && width > 340) {
-        centerX = width * 0.7
+        centerX = width * 0.85
         centerY = height * 0.05
       } else if (width <= 340) {
         centerX = width * 0.8
@@ -178,8 +178,13 @@ window.addEventListener('DOMContentLoaded', () => {
       const scaleColor = d3.scaleOrdinal(d3.schemeCategory20c)
 
       const pack = d3.pack()
-        .size([width , height ])
-        .padding(1.5)
+      if (width <= 600) {
+        pack.size([width * 1.8 , height * 1.8 ])
+        pack.padding(1.5)
+      } else {
+        pack.size([width , height ])
+        pack.padding(1.5)
+      }
 
       const forceCollide = d3.forceCollide(d => d.r + 1)
 
