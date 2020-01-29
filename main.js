@@ -507,7 +507,7 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
   youBet.addEventListener('click', () => {
-    youBetOverlay.style.display = 'block'
+    youBetOverlay.style.display = 'flex'
   })
 
   closeBtnYouBet.addEventListener('click', () => {
@@ -523,7 +523,7 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
   playerConnect.addEventListener('click', () => {
-    playerConnectOverlay.style.display = 'block'
+    playerConnectOverlay.style.display = 'flex'
   })
 
   closeBtnPlayerConnect.addEventListener('click', () => {
@@ -539,7 +539,7 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
   artistify.addEventListener('click', () => {
-    artistifyOverlay.style.display = 'block'
+    artistifyOverlay.style.display = 'flex'
   })
 
   closeBtnArtistify.addEventListener('click', () => {
@@ -555,7 +555,7 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
   battleships.addEventListener('click', () => {
-    battleshipsOverlay.style.display = 'block'
+    battleshipsOverlay.style.display = 'flex'
   })
 
   closeBtnBattleships.addEventListener('click', () => {

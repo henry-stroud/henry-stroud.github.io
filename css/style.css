@@ -22,10 +22,16 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #031e43;
   color: #fdfdfd;
+  max-width: 1280px;
+}
+body header {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  z-index: 22;
 }
 body header div.navbar {
-  position: fixed;
-  width: 100%;
   z-index: 10;
 }
 @media only screen and (max-width: 650px) {
@@ -87,7 +93,6 @@ body main {
 body main section {
   padding: 20px;
   width: 100%;
-  height: 100vh;
 }
 body main section .title-container {
   padding-top: 100px;
@@ -96,6 +101,7 @@ body main section .title-container {
   justify-content: center;
   align-items: center;
   font-size: 500%;
+  height: 100vh;
 }
 @media only screen and (max-width: 650px) {
   body main section .title-container {
@@ -118,7 +124,6 @@ body main section.skills {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 155vh;
 }
 body main section.skills div#skill-title {
   padding-top: 50px;
@@ -142,17 +147,6 @@ body main section.projects {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 150vh;
-}
-@media only screen and (max-width: 450px) {
-  body main section.projects {
-    height: 100vh;
-  }
-}
-@media only screen and (max-width: 320px) {
-  body main section.projects {
-    height: 150vh;
-  }
 }
 body main section.projects div#projects-title {
   padding-top: 50px;
@@ -162,6 +156,7 @@ body main section.projects div#projects-title {
   justify-content: center;
   font-size: 300%;
   font-weight: 200;
+  z-index: 2;
 }
 @media only screen and (max-width: 320px) {
   body main section.projects div#projects-title {
@@ -182,27 +177,6 @@ body main section.experience {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
-}
-@media only screen and (max-width: 450px) {
-  body main section.experience {
-    height: 150vh;
-  }
-}
-@media only screen and (max-width: 979px) {
-  body main section.experience {
-    height: 170vh;
-  }
-}
-@media only screen and (max-width: 679px) {
-  body main section.experience {
-    height: 220vh;
-  }
-}
-@media only screen and (max-width: 320px) {
-  body main section.experience {
-    height: 250vh;
-  }
 }
 body main section.experience div#experience-title {
   padding-top: 50px;
@@ -237,7 +211,7 @@ body main section.experience div.experience-container {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  min-width: 300px;
+  min-width: 250px;
 }
 body main section.experience div.experience-container h4 {
   padding-top: 30px;
@@ -245,6 +219,7 @@ body main section.experience div.experience-container h4 {
 }
 body main section.experience div.experience-container h5 {
   padding: 10px;
+  text-align: center;
 }
 body main section.experience div.experience-container h6 {
   padding-bottom: 10px;
@@ -252,27 +227,16 @@ body main section.experience div.experience-container h6 {
 body main section.experience div.experience-container p {
   font-size: 90%;
 }
+@media only screen and (min-width: 1300px) {
+  body main section.experience div.experience-container p {
+    font-size: 120%;
+  }
+}
 body main section.about {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
-}
-@media only screen and (max-width: 719px) {
-  body main section.about {
-    height: 120vh;
-  }
-}
-@media only screen and (max-width: 500px) {
-  body main section.about {
-    height: 170vh;
-  }
-}
-@media only screen and (max-width: 323px) {
-  body main section.about {
-    height: 200vh;
-  }
 }
 body main section.about div#about-title {
   padding-top: 50px;
@@ -309,7 +273,14 @@ body main section.about div.image-text-container div.about-details {
 @media only screen and (max-width: 719px) {
   body main section.about div.image-text-container div.about-details {
     width: 100%;
-    padding-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  body main section.about div.image-text-container div.about-details {
+    font-size: 120%;
   }
 }
 body main section.contact {
@@ -317,7 +288,7 @@ body main section.contact {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 70vh;
+  margin-bottom: 80px;
   margin-top: 50px;
 }
 body main section.contact div#contact-title {
@@ -363,6 +334,16 @@ body main section.contact div.image-text-container .contact-details .contact-lin
 }
 body main section.contact div.image-text-container .contact-details .contact-link a {
   color: white;
+}
+@media only screen and (max-width: 425px) {
+  body main section.contact div.image-text-container .contact-details .contact-link a {
+    font-size: 80%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  body main section.contact div.image-text-container .contact-details .contact-link a {
+    font-size: 120%;
+  }
 }
 
 [data-aos=underline] {
@@ -641,7 +622,7 @@ figure img {
 }
 
 .glider {
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .glider-dot:hover,
@@ -709,13 +690,16 @@ label {
 .overlay-top {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 99;
   overflow: hidden;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-inside {
@@ -726,6 +710,8 @@ label {
   width: 50%;
   height: 42%;
   overflow: auto;
+  max-width: 500px;
+  max-height: 300px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 2s;
@@ -861,6 +847,26 @@ label {
   }
   to {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 435px) {
+  h2 {
+    font-size: 36.8px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  h4, h5, h6 {
+    font-size: 120%;
+  }
+}
+@media only screen and (max-width: 358px) {
+  figure {
+    width: 260px !important;
+  }
+}
+@media only screen and (max-width: 330px) {
+  figure {
+    width: 230px !important;
   }
 }
 
