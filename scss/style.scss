@@ -1,5 +1,5 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #031e43;
   color: #fdfdfd;
   max-width: 1280px;
@@ -55,18 +55,18 @@ body {
           display: none;
           cursor: pointer;
           @media only screen and (max-width: 800px) {
-              display: block;
+            display: block;
           }
         }
         a {
           text-decoration: none;
           color: white;
           @media only screen and (max-width: 650px) {
-              display: none;
+            display: none;
           }
           @media only screen and (min-width: 650px) {
-              display: block;
-              padding: 0px;
+            display: block;
+            padding: 0px;
           }
         }
       }
@@ -95,7 +95,8 @@ body {
         .scroll-down {
           font-size: 25%;
         }
-        h1, h5 {
+        h1,
+        h5 {
           margin: 0 auto;
         }
       }
@@ -387,12 +388,11 @@ body {
 }
 
 .skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .console-underscore {
   background-color: #031e43;
@@ -472,7 +472,6 @@ body {
   }
 }
 
-
 #js {
   @media only screen and (max-width: 450px) {
     padding-right: 5px;
@@ -487,7 +486,6 @@ body {
     // animation-delay: 1s;
   }
 }
-
 
 .logos {
   width: 100%;
@@ -631,7 +629,6 @@ figure {
     cursor: pointer;
     flex-shrink: 0;
   }
-
 }
 
 #youbet-logo {
@@ -676,7 +673,7 @@ foreignobject.circle-overlay.hidden {
 }
 
 .changeColor {
-   background: white;
+  background: white;
 }
 
 svg.bubble {
@@ -728,10 +725,9 @@ label {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-inside {
@@ -753,7 +749,7 @@ label {
   @media only screen and (max-width: 430px) {
     height: 50%;
   }
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 2s;
 }
@@ -764,7 +760,8 @@ label {
   font-size: 30px;
 }
 
-.closeBtn:hover, .closeBtn:focus {
+.closeBtn:hover,
+.closeBtn:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -787,9 +784,10 @@ label {
       color: black;
     }
     i {
-      cursor: pointer
+      cursor: pointer;
     }
-    i:hover, i:focus {
+    i:hover,
+    i:focus {
       color: #808080;
     }
   }
@@ -799,13 +797,22 @@ label {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    &.disabled {
+      pointer-events: none;
+
+      i.fas {
+        color: grey;
+      }
+    }
     i.fas {
       color: black;
     }
     i {
       cursor: pointer;
     }
-    i:hover, i:focus {
+    i:hover,
+    i:focus {
       color: #808080;
     }
   }
@@ -840,7 +847,6 @@ label {
 }
 
 .nav-close {
-
 }
 
 // nav#myTopnav.topnav {
@@ -881,7 +887,6 @@ label {
 }
 
 .active-menu {
-
 }
 
 .inactive-menu {
@@ -915,10 +920,10 @@ label {
 }
 
 @media only screen and (min-width: 1300px) {
-
-  h4,h5,h6 {
+  h4,
+  h5,
+  h6 {
     font-size: 120%;
-
   }
 }
 
